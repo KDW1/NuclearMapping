@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "docx-parser": "^0.2.1",
+    "docx4js": "^3.2.20",
+    "word-extractor": "^1.0.4"
+  }
+}
