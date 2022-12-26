@@ -18,6 +18,11 @@
             <% }) %> 
         </thead>
         <tbody>
+            <tr>
+                <% locals.globalInfo.forEach((data) => { %>
+                    <td><strong><%= data %></strong></td>
+                <% }) %> 
+            </tr>
             <% locals.table.data.forEach((data) => { %>
                 <tr>
                     <% data.forEach((d) => { %>
