@@ -23,14 +23,17 @@
                     <td><strong><%= data %></strong></td>
                 <% }) %> 
             </tr>
-            <% locals.table.data.forEach((data) => { %>
+            <% locals.table.data.forEach((data, i) => { %>
+                <% if(data[0] == "Total" || data[0] == "Global") { return; } %> 
                 <tr>
                     <% data.forEach((d) => { %>
                         <td><%= d %> </td>
                     <% }) %> 
                 </tr>
-            <% }) %> 
-        </tbody>
+            <% }) %>
+            <tr>
+                <td>......</td>
+            </tr>
     </table>
     <pre id="json"><%= JSON.stringify(locals.data, undefined, 2) %></pre>
 </body>
