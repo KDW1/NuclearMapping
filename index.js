@@ -4,9 +4,9 @@ const fs = require("fs");
 const app = express(); 
 const PORT = 3000;
 
-let countries = JSON.parse(fs.readFileSync('countries.json', 'utf-8'));
+let countries = JSON.parse(fs.readFileSync('json/countries.json', 'utf-8'));
 
-let condensedData = JSON.parse(fs.readFileSync('nuclearDataSimple.json', 'utf-8'))
+let condensedData = JSON.parse(fs.readFileSync('json/nuclearDataSimple.json', 'utf-8'))
 let smallTables = [
     condensedData.firstFile.tableOne, condensedData.firstFile.tableTwo, condensedData.firstFile.tableThree, condensedData.firstFile.tableFour,
     condensedData.secondFile.tableOne, condensedData.secondFile.tableTwo, condensedData.secondFile.tableThree, condensedData.secondFile.tableFour,
@@ -16,6 +16,8 @@ let smallTables = [
 let tables = []
 
 updateInfo()
+
+app.use('/public', express.static('public'))
 
 // For parsing application/json
 app.use(express.json());
@@ -131,7 +133,7 @@ function tablesOf(country, listOfTables) {
 }
 
 function updateInfo() {
-    let data = JSON.parse(fs.readFileSync('nuclearData.json', 'utf-8'));
+    let data = JSON.parse(fs.readFileSync('json/nuclearData.json', 'utf-8'));
     tables = [
         data.firstFile.tableOne, data.firstFile.tableTwo, data.firstFile.tableThree, data.firstFile.tableFour,
         data.secondFile.tableOne, data.secondFile.tableTwo, data.secondFile.tableThree, data.secondFile.tableFour,

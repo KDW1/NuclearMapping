@@ -6,8 +6,8 @@
 
 const WordExtractor = require("word-extractor"); 
 const extractor = new WordExtractor();
-const extracted = extractor.extract("Table1.docx");
-const extracted2 = extractor.extract("Table2.docx");
+const extracted = extractor.extract("./docs/Table1.docx");
+const extracted2 = extractor.extract("./docs/Table2.docx");
 const fs = require("fs");
 
 tablesOfFirstFile();
@@ -70,7 +70,7 @@ async function tablesOfFirstFile() {
 
             console.log(data);
             
-            fs.writeFile('nuclearDataSimple.json', JSON.stringify(data), () => {});
+            fs.writeFile('./nuclearData.json', JSON.stringify(data), () => {});
             //Metrics are the first index of these ranges
             //First is from 12-22
             //Second is from 27-195 (+168)?
