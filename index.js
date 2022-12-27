@@ -1,24 +1,40 @@
-
 const express = require('express');
+const bodyParser = require('body-parser');
 const fs = require("fs");
 const app = express(); 
 const PORT = 3000;
 
 let countries = JSON.parse(fs.readFileSync('countries.json', 'utf-8'));
 
+let condensedData = JSON.parse(fs.readFileSync('nuclearDataSimple.json', 'utf-8'))
+let smallTables = [
+    condensedData.firstFile.tableOne, condensedData.firstFile.tableTwo, condensedData.firstFile.tableThree, condensedData.firstFile.tableFour,
+    condensedData.secondFile.tableOne, condensedData.secondFile.tableTwo, condensedData.secondFile.tableThree, condensedData.secondFile.tableFour,
+    condensedData.secondFile.tableFive, condensedData.secondFile.tableSix, condensedData.secondFile.tableSeven, condensedData.secondFile.tableEight,
+    condensedData.secondFile.tableNine
+]; 
 let tables = []
 
 updateInfo()
 
 // For parsing application/json
 app.use(express.json());
+app.use(bodyParser.urlencoded())
+app.use(bodyParser.json())
 app.set('view engine', 'ejs');
   
 // For parsing application/x-www-form-urlencoded
 app.use(express.urlencoded({ extended: true }));
 
+app.get('/', (req, res) => {
+    res.render('index', {
+        tables: smallTables
+    })
+})
+
 app.get('/table/:tableNum', (req, res) => {
     let num = parseInt(req.params.tableNum) - 1;
+    updateInfo();
     //Tables 
     if(num < tables.length) {
         // console.log("True Index: " + num);
@@ -37,7 +53,7 @@ app.get('/table/:tableNum', (req, res) => {
     }
 })
 
-app.get('/table/country/:country', (req, res) => {
+app.get('/country/:country', (req, res) => {
     let country = req.params.country;
     let population;
     let countryPresent = false;
@@ -46,6 +62,7 @@ app.get('/table/country/:country', (req, res) => {
             // console.log(data[1])
             population = data[1];
             console.log("Country present!");
+            country = data[0];
             countryPresent = true;
             return;
         }
@@ -60,8 +77,15 @@ app.get('/table/country/:country', (req, res) => {
             tables: tablesFound
         })
     } else {
-        res.send(`The country, ${country}, isn't listed...`)
+        res.render('countryTable', {
+            country: country
+        })
     }
+})
+
+app.post('/country', (req, res) => {
+    let { country } = req.body;
+    res.redirect('/country/' + country);
 })
 
 app.listen(PORT, function(err){

@@ -1,0 +1,220 @@
+{
+    "firstFile": {
+        "tableOne": {
+            "data": [],
+            "description": "Number of weapons on urban targets, yields, direct fatalities from the bomb blasts, and resulting number of people in danger of death due to famine for the different scenarios we studied.  The 5 Tg case scenario is from reference 16 for an India-Pakistan war taking place in 2008; the 16-47 Tg cases are from reference 18 for an India-Pakistan war taking place in 2025; and the 150 Tg case is from reference 52, which assumes attacks on France, Germany, Japan, U.K., U.S., Russia, and China.  The last column is the number of people who would starve by the end of Year 2 when the rest of the population is provided with the minimum amount of food needed to survive, assumed to be a calorie intake of 1911 kcal/capita/day, and for no international trade, from Supplemental Information, Table S5, the Partial Livestock case, in which 50% of livestock grain feed used for human consumption, and 50% of livestock grain feed used to raise livestock, using the latest complete data available, for the year 2010.  For 2010, the world population was 6,703,000,000.  There are many other scenarios in which these amounts of soot could be produced by a nuclear war, and the scenarios we use are only meant to be illustrative examples.  The last column is the case with the fewest number of deaths, and other cases are available in the Supplementary Information.",
+            "metrics": [
+                "Soot",
+                "Number of weapons",
+                "Yield",
+                "Number of direct fatalities",
+                "Number of people without food at the end of Year 2"
+            ],
+            "title": "Statistics",
+            "unit": ""
+        },
+        "tableTwo": {
+            "data": [],
+            "description": "Changes in food calorie availability (%) in Year 2 after a nuclear war for the nations with nuclear weapons and global average assuming no trade after simulated nuclear wars under the Livestock Case, the Partial Livestock Case, and the No Livestock Case with 50% livestock feed to human consumption.  The total calorie reduction is referenced to the observed food calorie availability in 2010.  China here includes Mainland China, Hong Kong, and Macao. 150 Tg + hw is half of the household waste added to food consumption, and 150 Tg + tw is total household waste added to food consumption.  Bold is used for headings and global averages.",
+            "metrics": [
+                "Nations",
+                "5 Tg",
+                "16 Tg",
+                "27 Tg",
+                "37 Tg",
+                "47 Tg",
+                "150 Tg",
+                "150 Tg + hw",
+                "150 Tg + tw"
+            ],
+            "title": "Livestock Case",
+            "unit": "% reduction"
+        },
+        "tableThree": {
+            "data": [],
+            "description": "Changes in food calorie availability (%) in Year 2 after a nuclear war for the nations with nuclear weapons and global average assuming no trade after simulated nuclear wars under the Livestock Case, the Partial Livestock Case, and the No Livestock Case with 50% livestock feed to human consumption.  The total calorie reduction is referenced to the observed food calorie availability in 2010.  China here includes Mainland China, Hong Kong, and Macao. 150 Tg + hw is half of the household waste added to food consumption, and 150 Tg + tw is total household waste added to food consumption.  Bold is used for headings and global averages.",
+            "metrics": [
+                "Nations",
+                "5 Tg",
+                "16 Tg",
+                "27 Tg",
+                "37 Tg",
+                "47 Tg",
+                "150 Tg",
+                "150 Tg + hw",
+                "150 Tg + tw"
+            ],
+            "title": "Partial Livestock Case (50% livestock feed to human consumption, 50% livestock feed to livestock)",
+            "unit": "% reduction"
+        },
+        "tableFour": {
+            "data": [],
+            "description": "Changes in food calorie availability (%) in Year 2 after a nuclear war for the nations with nuclear weapons and global average assuming no trade after simulated nuclear wars under the Livestock Case, the Partial Livestock Case, and the No Livestock Case with 50% livestock feed to human consumption.  The total calorie reduction is referenced to the observed food calorie availability in 2010.  China here includes Mainland China, Hong Kong, and Macao. 150 Tg + hw is half of the household waste added to food consumption, and 150 Tg + tw is total household waste added to food consumption.  Bold is used for headings and global averages.",
+            "metrics": [
+                "Nations",
+                "5 Tg",
+                "16 Tg",
+                "27 Tg",
+                "37 Tg",
+                "47 Tg",
+                "150 Tg",
+                "150 Tg + hw",
+                "150 Tg + tw"
+            ],
+            "title": "No Livestock Case (50% livestock feed to human consumption)",
+            "unit": "% reduction"
+        }
+    },
+    "secondFile": {
+        "tableOne": {
+            "data": [],
+            "description": "Changes in caloric production (%) from the major food crops (maize, rice, soybean and spring wheat) and marine fish in Year 2 after simulated nuclear conflicts for the nations with nuclear weapons and the global average for all nations calculated.  China here includes Mainland China, Hong Kong, and Macao.",
+            "metrics": [
+                "Nations",
+                "5 Tg",
+                "16 Tg",
+                "27 Tg",
+                "37 Tg",
+                "47 Tg",
+                "150 Tg"
+            ],
+            "title": "Calorie reduction from the major food crops and marine fish in nations with nuclear weapons.",
+            "unit": "% reduction"
+        },
+        "tableTwo": {
+            "data": [],
+            "description": "Changes in caloric production (%) from the major food crops (maize, rice, soybean and spring wheat) and marine fish in Year 2 after simulated nuclear conflicts for all nations calculated.  China here includes Mainland China, Hong Kong, and Macao.",
+            "metrics": [
+                "Nation",
+                "5 Tg",
+                "16 Tg",
+                "27 Tg",
+                "37 Tg",
+                "47 Tg",
+                "150 Tg"
+            ],
+            "title": "Calorie reduction from the major food crops and marine fish in all nations calculated.",
+            "unit": "% reduction"
+        },
+        "tableThree": {
+            "data": [],
+            "description": "Assumptions for the Livestock, Partial Livestock, and No Livestock cases.  Livestock includes meat, dairy, eggs, and aquaculture.  Inland fish capture, a minor source of food, is not considered in any of the cases",
+            "metrics": [
+                "Assumptions",
+                "Livestock",
+                "Partial Livestock",
+                "No Livestock"
+            ],
+            "title": "Assumptions for the Livestock, Partial Livestock, and No Livestock cases.",
+            "unit": ""
+        },
+        "tableFour": {
+            "data": [],
+            "description": "Number of people who would die from starvation (millions) after the simulated nuclear war in Year 2 for all nations assuming no trade under the Livestock case (livestock production is continued).  The second column is the population in millions in 201045.  150 Tg + hw is half of the household waste added to food consumption, and 150 Tg + tw is total household waste added to food consumption.",
+            "metrics": [
+                "Nation",
+                "Population",
+                "5 Tg",
+                "16 Tg",
+                "27 Tg",
+                "37 Tg",
+                "47 Tg",
+                "150 Tg",
+                "150 Tg +hw",
+                "150 Tg + tw"
+            ],
+            "title": "Number of people who would die from starvation after the simulated nuclear war in Year 2 for all nations for the Livestock case with trade off.",
+            "unit": "million people"
+        },
+        "tableFive": {
+            "data": [],
+            "description": "Number of people who would die from starvation (millions) after the simulated nuclear war in Year 2 for all nations, assuming no trade, under the Partial Livestock case (assuming 50% of livestock grain feed is used for human consumption, and 50% of livestock grain feed is used to raise livestock).  The second column is the population in millions in 201045.  150 Tg + hw is half of the household waste added to food consumption, and 150 Tg + tw is total household waste added to food consumption.",
+            "metrics": [
+                "Nation",
+                "Population",
+                "5 Tg",
+                "16 Tg",
+                "27 Tg",
+                "37 Tg",
+                "47 Tg",
+                "150 Tg",
+                "150 Tg + hw",
+                "150 Tg + tw"
+            ],
+            "title": "Number of people who would die from starvation after the simulated nuclear war in Year 2 for all nations for the Partial Livestock case with trade off.",
+            "unit": "million people"
+        },
+        "tableSix": {
+            "data": [],
+            "description": "Number of people who would die from starvation (millions) after the simulated nuclear war in Year 2 for all nations, assuming no trade, under the No Livestock case (assuming livestock is killed in Year 1 and 50% of livestock grain feed is used for human consumption).  The second column is the population in millions in 201042. 150 Tg + hw is half of the household waste added to food consumption, and 150 Tg + tw is total household waste added to food consumption.",
+            "metrics": [
+                "Nation",
+                "Population",
+                "5 Tg",
+                "16 Tg",
+                "27 Tg",
+                "37 Tg",
+                "47 Tg",
+                "150 Tg",
+                "150 Tg + hw",
+                "150 Tg + tw"
+            ],
+            "title": "Number of people who would die from starvation after the simulated nuclear war in Year 2 for all nations for the No Livestock case with trade off.",
+            "unit": "million people"
+        },
+        "tableSeven": {
+            "data": [],
+            "description": "Number of people who would die from starvation (millions) after the simulated nuclear war in Year 2 for all nations assuming that trade would continue under the Livestock case (livestock production is continued).  The second column is the population in millions in 201045.  150 Tg + hw is half of the household waste added to food consumption, and 150 Tg + tw is total household waste added to food consumption.",
+            "metrics": [
+                "Nation",
+                "Population",
+                "5 Tg",
+                "16 Tg",
+                "27 Tg",
+                "37 Tg",
+                "47 Tg",
+                "150 Tg",
+                "150 Tg +hw",
+                "150 Tg + tw"
+            ],
+            "title": "Number of people who would die from starvation after the simulated nuclear war in Year 2 for all nations for the Livestock case with trade on.",
+            "unit": "million people"
+        },
+        "tableEight": {
+            "data": [],
+            "description": "Number of people who would die from starvation (millions) after the simulated nuclear war in Year 2 for all nations, assuming that trade would continue, under the Partial Livestock case (assuming 50% of livestock grain feed is used for human consumption, and 50% of livestock grain feed is used to raise livestock).  The second column is the population in millions in 201045.  150 Tg + hw is half of the household waste added to food consumption, and 150 Tg + tw is total household waste added to food consumption.",
+            "metrics": [
+                "Nation",
+                "Population",
+                "5 Tg",
+                "16 Tg",
+                "27 Tg",
+                "37 Tg",
+                "47 Tg",
+                "150 Tg",
+                "150 Tg + hw",
+                "150 Tg + tw"
+            ],
+            "title": "Number of people who would die from starvation after the simulated nuclear war in Year 2 for all nations for the Partial Livestock case with trade on.",
+            "unit": "million people"
+        },
+        "tableNine": {
+            "data": [],
+            "description": "Number of people who would die from starvation (millions) after the simulated nuclear war in Year 2 for all nations, assuming that trade would continue, under the No Livestock case (assuming livestock is killed in Year 1 and 50% of livestock grain feed is used for human consumption).  The second column is the population in millions in 201042. 150 Tg + hw is half of the household waste added to food consumption, and 150 Tg + tw is total household waste added to food consumption.",
+            "metrics": [
+                "Nation",
+                "Population",
+                "5 Tg",
+                "16 Tg",
+                "27 Tg",
+                "37 Tg",
+                "47 Tg",
+                "150 Tg",
+                "150 Tg + hw",
+                "150 Tg + tw"
+            ],
+            "title": "Number of people who would die from starvation after the simulated nuclear war in Year 2 for all nations for the No Livestock case with trade on.",
+            "unit": "million people"
+        }
+    }
+}

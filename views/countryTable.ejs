@@ -8,49 +8,54 @@
     <%- include('chartJs.ejs') %> 
 </head>
 <body>
-    <h1><%= locals.country %></h1>
-    <h2><%= locals.population %> million people</h2>
-    <% locals.tables.forEach((data, i) => { %>
-        <br>
-        <h3><%= data.title %></h3>
-        <h2><%= i %> </h2>
-        <div style="height: 400px; width: 500px;">
-            <canvas id="myChart<%= i %>"></canvas>
-        </div>
-        <script>
-        console.log("<%=data.metrics%>");
-        console.log("<%=data.table%>\n");
-        
-        new Chart(document.getElementById('myChart<%=i%>'), {
-            type: 'line',
-            data: {
-            labels: '<%=data.metrics%>'.split(','),
-            datasets: [{
-                label: '# of Votes',
-                data: '<%=data.table%>'.split(','),
-                borderWidth: 1
-            }]
-            },
-            options: {
-            scales: {}
-            }
-        });
-        </script>
-    <!-- <table>
-        <thead>
-            <% data.metrics.forEach((d) => { %>
-                <th><%= d %> </th>
-            <% }) %> 
-        </thead>
-        <tbody>
-            <tr>
-                <% data.table.forEach((elem) => { %>
-                    <td><%= elem %></td>
+    <a href="/">Back...</a>
+    <% if(locals.tables) { %>
+        <h1><%= locals.country %></h1>
+        <h2><%= locals.population %> million people</h2>
+        <% locals.tables.forEach((data, i) => { %>
+            <br>
+            <h3><%= data.title %></h3>
+            <h2><%= i %> </h2>
+            <div style="height: 400px; width: 500px;">
+                <canvas id="myChart<%= i %>"></canvas>
+            </div>
+            <script>
+            console.log("<%=data.metrics%>");
+            console.log("<%=data.table%>\n");
+            
+            new Chart(document.getElementById('myChart<%=i%>'), {
+                type: 'line',
+                data: {
+                labels: '<%=data.metrics%>'.split(','),
+                datasets: [{
+                    label: '# of Votes',
+                    data: '<%=data.table%>'.split(','),
+                    borderWidth: 1
+                }]
+                },
+                options: {
+                scales: {}
+                }
+            });
+            </script>
+        <!-- <table>
+            <thead>
+                <% data.metrics.forEach((d) => { %>
+                    <th><%= d %> </th>
                 <% }) %> 
-            </tr>
-        </tbody>
-    </table> -->
-    <% }) %> 
-    <!-- <pre><%= JSON.stringify(locals.tables, undefined, 2) %></pre> -->
+            </thead>
+            <tbody>
+                <tr>
+                    <% data.table.forEach((elem) => { %>
+                        <td><%= elem %></td>
+                    <% }) %> 
+                </tr>
+            </tbody>
+        </table> -->
+        <% }) %> 
+        <!-- <pre><%= JSON.stringify(locals.tables, undefined, 2) %></pre> -->
+    <% } else { %>
+        <h1>The country <%= locals.country %> isn't present...</h1>
+    <% } %>  
 </body>
 </html>
