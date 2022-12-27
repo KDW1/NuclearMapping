@@ -5,16 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <%- include('chartJs.ejs') %> 
 </head>
 <body>
     <h1><%= locals.country %></h1>
-    <% locals.tables.forEach((data) => { %>
+    <h2><%= locals.population %> million people</h2>
+    <% locals.tables.forEach((data, i) => { %>
         <br>
         <h3><%= data.title %></h3>
+        <h2><%= i %> </h2>
+        <div style="height: 400px; width: 500px;">
+            <canvas id="myChart<%= i %>"></canvas>
+        </div>
+        <script>
+        console.log("<%=data.metrics%>");
+        console.log("<%=data.table%>\n");
         
-    <table>
+        new Chart(document.getElementById('myChart<%=i%>'), {
+            type: 'line',
+            data: {
+            labels: '<%=data.metrics%>'.split(','),
+            datasets: [{
+                label: '# of Votes',
+                data: '<%=data.table%>'.split(','),
+                borderWidth: 1
+            }]
+            },
+            options: {
+            scales: {}
+            }
+        });
+        </script>
+    <!-- <table>
         <thead>
-            <% data.metric.forEach((d) => { %>
+            <% data.metrics.forEach((d) => { %>
                 <th><%= d %> </th>
             <% }) %> 
         </thead>
@@ -25,7 +49,7 @@
                 <% }) %> 
             </tr>
         </tbody>
-    </table>
+    </table> -->
     <% }) %> 
     <!-- <pre><%= JSON.stringify(locals.tables, undefined, 2) %></pre> -->
 </body>

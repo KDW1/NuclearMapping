@@ -5,10 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <%- include('chartJs.ejs') %> 
 </head>
 <body>
     <h1><%= locals.table.title %> </h1>
     <h2>Metrics: <%= locals.table.metrics.join(" | ") %></h2>
+    <h6><%= locals.table.description %> </h6>
     <hr>
     <h2>Table #<%= locals.num %> </h2>
     <table>
