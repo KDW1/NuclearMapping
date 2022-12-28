@@ -42,7 +42,7 @@ app.get('/table/:tableNum', (req, res) => {
         // console.log("True Index: " + num);
         let select = tables[num]
         let globalInfo = [];
-        if(select.data[select.data.length-1].title == "Total" || select.data[select.data.length-1].title == "Global") {
+        if(select.data[select.data.length-1][0] == "Total" || select.data[select.data.length-1][0] == "Global") {
             globalInfo = select.data[select.data.length-1];
         }
         res.render('globalTable', {

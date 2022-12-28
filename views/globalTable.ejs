@@ -10,35 +10,33 @@
 </head>
 <body>
     <a href="/">Back...</a>
-    <h1><%= locals.table.title %> </h1>
-    <h2>Metrics: <%= locals.table.metrics.join(" | ") %></h2>
-    <h6><%= locals.table.description %> </h6>
-    <hr>
-    <h2>Table #<%= locals.num %> </h2>
-    <table>
-        <thead>
-            <% locals.table.metrics.forEach((data) => { %>
-                <th><%= data %> </th>
-            <% }) %> 
-        </thead>
-        <tbody>
-            <tr>
-                <% locals.globalInfo.forEach((data) => { %>
-                    <td><strong><%= data %></strong></td>
-                <% }) %> 
-            </tr>
-            <% locals.table.data.forEach((data, i) => { %>
-                <% if(data[0] == "Total" || data[0] == "Global") { return; } %> 
+    <div class="mx-4 my-2">
+        <p class="text-3xl font-semibold text-center w-3/4 mx-auto line-clamp-2"><%= locals.table.title %></p>
+        <p class="text-base mt-2 text-center w-3/4 mx-auto"><%= locals.table.description %> </p>
+        <p class="mt-8 text-3xl font-semibold text-center">Table #<%= locals.num %> </p>
+        <table class="table-auto mx-auto mt-4 uppercase mb-12">
+            <thead>
                 <tr>
-                    <% data.forEach((d) => { %>
-                        <td><%= d %> </td>
+                    <% locals.table.metrics.forEach((data) => { %>
+                        <th class="text-start pr-10 font-semibold"><%= data %> </th>
                     <% }) %> 
                 </tr>
-            <% }) %>
-            <tr>
-                <td>......</td>
-            </tr>
-    </table>
-    <pre id="json"><%= JSON.stringify(locals.data, undefined, 2) %></pre>
+            </thead>
+            <tbody>
+                <tr>
+                    <% locals.globalInfo.forEach((data) => { %>
+                        <td class="font-bold"><%= data %></td>
+                    <% }) %> 
+                </tr>
+                <% locals.table.data.forEach((data, i) => { %>
+                    <% if(data[0] == "Total" || data[0] == "Global") { return; } %> 
+                    <tr>
+                        <% data.forEach((d) => { %>
+                            <td><%= d %> </td>
+                        <% }) %> 
+                    </tr>
+                <% }) %>
+        </table>
+    </div>
 </body>
 </html>
