@@ -26,7 +26,9 @@
             <% if(locals.table.unit != '') { %>
                 <p class="text-xl text-center">Unit: <%= locals.table.unit %> </p>
             <% } %> 
-            <p class="mt-2 text-base text-center"><strong>*</strong>You can click on a country's name to see all tables under it</p>
+            <% if(locals.containsCountries) { %>
+                <p class="mt-2 text-base text-center"><strong>*</strong>You can click on a country's name to see all tables under it</p>
+            <% }  %> 
             <table class="table-auto mx-auto mt-4 uppercase mb-12">
                 <thead>
                     <tr>
