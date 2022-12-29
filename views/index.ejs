@@ -7,22 +7,31 @@
     <title>Document</title>
     <%- include('style.ejs') %> 
 </head>
-<body>
-    <div class="mx-4 my-2">
-        <p class="text-6xl font-semibold text-center">Nuclear Data</p>
-        <p class="text-2xl text-center">Mapping project by KingCode</p>
-        <form class="mx-auto bg-white px-6 py-4 rounded mt-5 shadow-2xl shadow-stone-400 w-min hover:-translate-y-2 ease-in-out transition duration-300" action="/country" method="post">
+<body class="bg-yellow-400">
+    <div class="px-12 py-4 bg-white mx-auto pt-4">
+        <a href="/">
+            <p class="text-6xl font-semibold text-center">Nuclear Data</p>
+        </a>
+        <div class="text-center">
+            <p class="text-2xl text-center inline">Mapping project by </p>
+            <a class="text-2xl font-bold text-blue-200 underline hover:text-blue-500 transition-all duration-300" href="https://kingcode.dev">KingCode</a>
+        </div>
+    </div>
+    <div class="px-12 py-4 shadow-xl shadow-orange-400 relative bg-white w-min min-w-max mx-auto rounded mt-4  hover:-translate-y-2 ease-in-out transition duration-300">
+        <form class="mx-auto w-min" action="/country" method="post">
             <label class="text-center block font-medium text-xl align-baseline" for="">Search by Country:</label>
             <input class="mt-2 mx-auto border px-2 py-2 rounded align-baseline" name="country" type="text">
         </form>
-        <p class="text-center text-4xl mt-12 font-semibold">Tables:</p>
-        <% locals.tables.forEach((data, i) => { %>
-            <div onclick="location.href = '/table/<%= i + 1%>'" class="mt-12 w-1/2 mx-auto border-b-2 pb-4">
-                <p class="text-3xl font-semibold line-clamp-1"><%= data.title %>:</p>
-                <p class="text-lg line-clamp-3 mt-2"><%= data.description %></p>
-            </div>
-        <% }) %> 
-        <!-- <pre><%= JSON.stringify(locals.tables, undefined, 2) %> </pre> -->
     </div>
+
+        <div class="mb-12 px-12 pt-4 pb-8 shadow-xl shadow-orange-400 relative bg-white mt-4 w-3/4 rounded-xl mx-auto">
+            <p class="text-center text-4xl mt-6 font-semibold">Tables:</p>
+            <% locals.tables.forEach((data, i) => { %>
+                <div onclick="location.href = '/table/<%= i + 1%>'" class="hover:scale-105 transition duration-300 ease-in-out cursor-pointer mt-12 w-full mx-auto border-b-2 pb-4">
+                    <p class="text-3xl font-semibold line-clamp-1"><%= data.title %>:</p>
+                    <p class="text-lg line-clamp-3 mt-2"><%= data.description %></p>
+                </div>
+            <% }) %> 
+        </div>
 </body>
 </html>

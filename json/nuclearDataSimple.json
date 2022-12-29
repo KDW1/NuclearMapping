@@ -11,7 +11,8 @@
                 "Number of people without food at the end of Year 2"
             ],
             "title": "Statistics",
-            "unit": ""
+            "unit": "",
+            "numberedIndex": 1
         },
         "tableTwo": {
             "data": [],
@@ -28,7 +29,8 @@
                 "150 Tg + tw"
             ],
             "title": "Livestock Case",
-            "unit": "% reduction"
+            "unit": "% reduction",
+            "numberedIndex": 2
         },
         "tableThree": {
             "data": [],
@@ -45,7 +47,8 @@
                 "150 Tg + tw"
             ],
             "title": "Partial Livestock Case (50% livestock feed to human consumption, 50% livestock feed to livestock)",
-            "unit": "% reduction"
+            "unit": "% reduction",
+            "numberedIndex": 3
         },
         "tableFour": {
             "data": [],
@@ -62,7 +65,8 @@
                 "150 Tg + tw"
             ],
             "title": "No Livestock Case (50% livestock feed to human consumption)",
-            "unit": "% reduction"
+            "unit": "% reduction",
+            "numberedIndex": 4
         }
     },
     "secondFile": {
@@ -79,7 +83,8 @@
                 "150 Tg"
             ],
             "title": "Calorie reduction from the major food crops and marine fish in nations with nuclear weapons.",
-            "unit": "% reduction"
+            "unit": "% reduction",
+            "numberedIndex": 5
         },
         "tableTwo": {
             "data": [],
@@ -94,7 +99,8 @@
                 "150 Tg"
             ],
             "title": "Calorie reduction from the major food crops and marine fish in all nations calculated.",
-            "unit": "% reduction"
+            "unit": "% reduction",
+            "numberedIndex": 6
         },
         "tableThree": {
             "data": [],
@@ -106,7 +112,8 @@
                 "No Livestock"
             ],
             "title": "Assumptions for the Livestock, Partial Livestock, and No Livestock cases.",
-            "unit": ""
+            "unit": "",
+            "numberedIndex": 7
         },
         "tableFour": {
             "data": [],
@@ -124,7 +131,8 @@
                 "150 Tg + tw"
             ],
             "title": "Number of people who would die from starvation after the simulated nuclear war in Year 2 for all nations for the Livestock case with trade off.",
-            "unit": "million people"
+            "unit": "million people",
+            "numberedIndex": 8
         },
         "tableFive": {
             "data": [],
@@ -142,7 +150,8 @@
                 "150 Tg + tw"
             ],
             "title": "Number of people who would die from starvation after the simulated nuclear war in Year 2 for all nations for the Partial Livestock case with trade off.",
-            "unit": "million people"
+            "unit": "million people",
+            "numberedIndex": 9
         },
         "tableSix": {
             "data": [],
@@ -160,7 +169,8 @@
                 "150 Tg + tw"
             ],
             "title": "Number of people who would die from starvation after the simulated nuclear war in Year 2 for all nations for the No Livestock case with trade off.",
-            "unit": "million people"
+            "unit": "million people",
+            "numberedIndex": 10
         },
         "tableSeven": {
             "data": [],
@@ -178,7 +188,8 @@
                 "150 Tg + tw"
             ],
             "title": "Number of people who would die from starvation after the simulated nuclear war in Year 2 for all nations for the Livestock case with trade on.",
-            "unit": "million people"
+            "unit": "million people",
+            "numberedIndex": 11
         },
         "tableEight": {
             "data": [],
@@ -196,7 +207,8 @@
                 "150 Tg + tw"
             ],
             "title": "Number of people who would die from starvation after the simulated nuclear war in Year 2 for all nations for the Partial Livestock case with trade on.",
-            "unit": "million people"
+            "unit": "million people",
+            "numberedIndex": 12
         },
         "tableNine": {
             "data": [],
@@ -214,7 +226,8 @@
                 "150 Tg + tw"
             ],
             "title": "Number of people who would die from starvation after the simulated nuclear war in Year 2 for all nations for the No Livestock case with trade on.",
-            "unit": "million people"
+            "unit": "million people",
+            "numberedIndex": 13
         }
     }
 }

@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const fs = require("fs");
+const { countReset } = require('console');
 const app = express(); 
 const PORT = 3000;
 
@@ -37,18 +38,24 @@ app.get('/', (req, res) => {
 app.get('/table/:tableNum', (req, res) => {
     let num = parseInt(req.params.tableNum) - 1;
     updateInfo();
+    let containsCountries = false;
     //Tables 
     if(num < tables.length) {
         // console.log("True Index: " + num);
         let select = tables[num]
+        console.log(select);
         let globalInfo = [];
         if(select.data[select.data.length-1][0] == "Total" || select.data[select.data.length-1][0] == "Global") {
             globalInfo = select.data[select.data.length-1];
         }
+        if(select.metrics[0] == 'Nations' || select.metrics[0] == 'Nation') {
+            containsCountries = true;
+        }
         res.render('globalTable', {
             num: num + 1,
             table: select,
-            globalInfo: globalInfo
+            globalInfo: globalInfo,
+            containsCountries: containsCountries
         })
     } else {
         res.send("The table number was out of range....");
@@ -102,6 +109,10 @@ function tablesOf(country, listOfTables) {
             metrics: tab.metrics,
             title: tab.title,
             table: [],
+            unit: tab.unit,
+            numberedIndex: tab.numberedIndex,
+            maxVal: 0,
+            minVal: 0,
         };
         tab.data.forEach((dat) => {
             let mutable = dat;
@@ -121,6 +132,11 @@ function tablesOf(country, listOfTables) {
                         mutable.splice(0, 1);
                     }
                 }
+                console.log("Mutable: " + mutable);
+                let max = Math.max(...mutable);
+                let min = Math.min(...mutable);
+                result.maxVal = max;
+                result.minVal = min;
                 result.table = mutable;
                 // console.log("Table:");
                 // console.log(result);

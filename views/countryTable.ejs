@@ -8,36 +8,70 @@
     <%- include('chartJs.ejs') %> 
     <%- include('style.ejs') %> 
 </head>
-<body>
-    <a href="/">Back...</a>
+<body class="bg-yellow-400">
+    <a href="/">
+        <svg class="px-4 py-4 bg-white rounded-xl h-12 mx-auto mt-8 mb-2 cursor-pointer hover:-rotate-12 hover:-translate-x-2 hover:-translate-y-1 transition duration-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+            <!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+            <path d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40H456c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1H416 392c-22.1 0-40-17.9-40-40V448 384c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32v64 24c0 22.1-17.9 40-40 40H160 128.1c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2H104c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9 .1-2.8V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z"/>
+        </svg>
+    </a>
+    <div class="px-12 py-4 mb-4 shadow-xl shadow-orange-400 relative bg-white w-1/3 mx-auto rounded mt-4  hover:-translate-y-2 ease-in-out transition duration-300">
+        <form class="mx-auto w-min" action="/country" method="post">
+            <label class="text-center block font-medium text-xl w-max align-baseline" for="">Search up another Country:</label>
+            <input class="mt-2 mx-auto border px-2 py-2 rounded align-baseline w-full" name="country" type="text">
+        </form>
+    </div>
     <% if(locals.tables) { %>
-        <h1><%= locals.country %></h1>
-        <h2><%= locals.population %> million people</h2>
+        <div class="mb-4 shadow-xl shadow-orange-400 relative mx-auto px-8 py-4 w-1/2 bg-white rounded-xl">
+            <p class="text-3xl font-semibold text-center"><%= locals.country %></p>
+            <p class="text-base text-center"><%= locals.population %> million people</p>
+            <p class="mt-2 text-base text-center"><strong>*</strong>You can click on a table name to see all other tables like it</p>
+        </div>
         <% locals.tables.forEach((data, i) => { %>
-            <br>
-            <h3><%= data.title %></h3>
-            <h2><%= i %> </h2>
-            <div style="height: 400px; width: 500px;">
-                <canvas id="myChart<%= i %>"></canvas>
+            <div onclick="location.href = '/table/<%=data.numberedIndex%>'" class="cursor-pointer mb-6 shadow-xl shadow-orange-400 relative mx-auto px-8 py-4 w-1/2 bg-white rounded-xl hover:scale-105 transition-all duration-300">
+                <p class="text-3xl font-semibold text-start line-clamp-2 w-3/4"><%= data.title %></p>
+                <p class="text-xl mt-2 text-start mb-2">Table <%= data.numberedIndex %></p>
+                <div class="mb-4">
+                    <canvas id="myChart<%= i %>"></canvas>
+                </div>
             </div>
             <script>
-            console.log("<%=data.metrics%>");
-            console.log("<%=data.table%>\n");
+            console.log(parseInt('<%=data.maxVal%>') + parseInt('<%=data.maxVal%>'));
             
-            new Chart(document.getElementById('myChart<%=i%>'), {
+             new Chart(document.getElementById('myChart<%=i%>'), {
                 type: 'line',
                 data: {
                 labels: '<%=data.metrics%>'.split(','),
                 datasets: [{
-                    label: '# of Votes',
+                    label: '<%= data.unit %>',
                     data: '<%=data.table%>'.split(','),
-                    borderWidth: 1
+                    borderWidth: 1,
+                    borderColor: "#f55142",
+                    backgroundColor: "#f5f242",
+                    color: "#73342e"
                 }]
                 },
                 options: {
-                scales: {}
+                    elements: {
+                        point: {
+                            pointStyle: 'rect'
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            labels: {
+                                // This more specific font property overrides the global property
+                                font: {
+                                    size: 16,
+                                    family: 'sans-serif',
+                                    weight: 'bold'
+                                }
+                            }
+                        }
+                    }
                 }
             });
+            // chart.defaults.elements.bar.pointStyle = "cross";
             </script>
         <!-- <table>
             <thead>
