@@ -5,6 +5,8 @@ const { countReset } = require('console');
 const app = express(); 
 const PORT = 3000;
 
+require('dotenv').config()
+
 let countries = JSON.parse(fs.readFileSync('json/countries.json', 'utf-8'));
 
 let condensedData = JSON.parse(fs.readFileSync('json/nuclearDataSimple.json', 'utf-8'))
@@ -97,7 +99,7 @@ app.post('/country', (req, res) => {
     res.redirect('/country/' + country);
 })
 
-app.listen(PORT, function(err){
+app.listen(process.env.PORT || port, function(err){
     if (err) console.log(err);
     console.log("Server listening on PORT", PORT);
 });
