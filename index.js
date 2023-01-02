@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const fs = require("fs");
 const { countReset } = require('console');
 const app = express(); 
-const PORT = 3000;
+const port = 3000;
 
 require('dotenv').config()
 
