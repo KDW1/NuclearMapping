@@ -18,42 +18,45 @@
             </svg>
         </a>
         <div class="shadow-xl shadow-orange-400 relative mx-auto px-8 py-4 w-3/4 bg-white rounded-xl">
-            <p class="text-3xl font-semibold text-center line-clamp-2"><%= locals.table.title %></p>
-            <p class="text-base mt-2 text-center"><%= locals.table.description %> </p>
+            <p class="text-xl sm:text-3xl font-semibold text-center line-clamp-2"><%= locals.table.title %></p>
+            <p class="text-xs sm:text-base mt-2 text-center"><%= locals.table.description %> </p>
         </div>
         <div class="mb-12 shadow-xl shadow-orange-400 relative mx-auto px-8 py-4 w-3/4 bg-white rounded-xl mt-4">
-            <p class="mt-8 text-3xl font-semibold text-center">Table #<%= locals.num %> </p>
+            <p class="mt-8 text-xl sm:text-3xl font-semibold text-center">Table #<%= locals.num %> </p>
             <% if(locals.table.unit != '') { %>
-                <p class="text-xl text-center">Unit: <%= locals.table.unit %> </p>
+                <p class="text-base sm:text-xl text-center">Unit: <%= locals.table.unit %> </p>
             <% } %> 
             <% if(locals.containsCountries) { %>
-                <p class="mt-2 text-base text-center"><strong>*</strong>You can click on a country's name to see all tables under it</p>
+                <p class="mt-2 text-xs sm:text-base text-center"><strong>*</strong>You can click on a country's name to see all tables under it</p>
             <% }  %> 
-            <table class="table-auto mx-auto mt-4 uppercase mb-12">
-                <thead>
-                    <tr>
-                        <% locals.table.metrics.forEach((data) => { %>
-                            <th class="text-start pr-10 text-sm font-semibold"><%= data %> </th>
-                        <% }) %> 
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <% locals.globalInfo.forEach((data) => { %>
-                            <td class="font-bold"><%= data %></td>
-                        <% }) %> 
-                    </tr>
-                    <% locals.table.data.forEach((data, i) => { %>
-                        <% if(data[0] == "Total" || data[0] == "Global") { return; } %> 
-                        <% let countryName = ''; %> 
-                        <% if(locals.containsCountries) { countryName = data[0]; } %> 
-                        <tr  id="<%= countryName%>" <% if(countryName != '') { %>onclick="location.href = '/country/<%= countryName %>'"<% } %>   class="cursor-pointer group transition duration-300">
-                            <% data.forEach((d, i) => { %>
-                                <td class="group-hover:py-4 transition-all duration-300 ease-in-out <% if(i == 0) { %>group-hover:font-bold <% } %>" ><%= d %> </td>
+            <p class="block overflow-x:hidden text-center text-sm md:text-base mt-4 font-semibold w-3/4 mx-auto relative"><strong>*</strong> You can scroll to see the rest of the table...</p>
+            <div class="overflow-x-scroll">
+                <table class="table-auto mx-auto mt-4 uppercase mb-12">
+                    <thead>
+                        <tr>
+                            <% locals.table.metrics.forEach((data) => { %>
+                                <th class="text-start pr-10 text-xs sm:text-sm font-semibold"><%= data %> </th>
                             <% }) %> 
                         </tr>
-                    <% }) %>
-            </table>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <% locals.globalInfo.forEach((data) => { %>
+                                <td class="font-bold"><%= data %></td>
+                            <% }) %> 
+                        </tr>
+                        <% locals.table.data.forEach((data, i) => { %>
+                            <% if(data[0] == "Total" || data[0] == "Global") { return; } %> 
+                            <% let countryName = ''; %> 
+                            <% if(locals.containsCountries) { countryName = data[0]; } %> 
+                            <tr  id="<%= countryName%>" <% if(countryName != '') { %>onclick="location.href = '/country/<%= countryName %>'"<% } %>   class="cursor-pointer group transition duration-300">
+                                <% data.forEach((d, i) => { %>
+                                    <td class="group-hover:py-4 transition-all duration-300 ease-in-out <% if(i == 0) { %>group-hover:font-bold <% } %>" ><%= d %> </td>
+                                <% }) %> 
+                            </tr>
+                        <% }) %>
+                </table>
+            </div>
         </div>
     </div>
     <script> 

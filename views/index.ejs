@@ -17,14 +17,14 @@
             <a class="text-2xl font-bold text-blue-200 underline hover:text-blue-500 transition-all duration-300" href="https://kingcode.dev">KingCode</a>
         </div>
     </div>
-    <div class="px-12 py-4 shadow-xl shadow-orange-400 relative bg-white w-min min-w-max mx-auto rounded mt-4  hover:-translate-y-2 ease-in-out transition duration-300">
+    <div class="px-12 py-4 shadow-xl shadow-orange-400 relative bg-white w-min min-w-max mx-auto rounded-md mt-4  hover:-translate-y-2 ease-in-out transition duration-300">
         <form class="mx-auto w-min" action="/country" method="post">
             <label class="text-center block font-medium text-xl align-baseline" for="">Search by Country:</label>
-            <input class="mt-2 mx-auto border px-2 py-2 rounded align-baseline" name="country" type="text">
+            <input class="mt-2 mx-auto px-2 py-2 rounded align-baseline border-2" name="country" type="text">
         </form>
     </div>
 
-        <div class="mb-12 px-12 pt-4 pb-8 shadow-xl shadow-orange-400 relative bg-white mt-4 w-3/4 rounded-xl mx-auto">
+        <div class="mb-12 px-12 pt-4 pb-8 shadow-xl shadow-orange-400 relative bg-white mt-4 w-11/12 md:w-3/4 rounded-xl mx-auto">
             <p class="text-center text-4xl mt-6 font-semibold">Tables:</p>
             <p class="mt-2 text-base text-center"><strong>*</strong>You can click the sections to see tables fully</p>
             <% locals.tables.forEach((data, i) => { %>
