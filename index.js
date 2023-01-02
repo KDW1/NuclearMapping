@@ -102,7 +102,7 @@ app.post('/country', (req, res) => {
 
 app.listen(process.env.PORT || port, function(err){
     if (err) console.log(err);
-    console.log("Server listening on PORT", PORT);
+    console.log("Server listening on PORT", process.env.PORT);
 });
 
 function tablesOf(country, listOfTables) {
