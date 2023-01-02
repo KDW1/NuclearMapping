@@ -7,6 +7,7 @@ const PORT = 3000;
 
 require('dotenv').config()
 
+console.log("Port is " + process.env.PORT);
 let countries = JSON.parse(fs.readFileSync('json/countries.json', 'utf-8'));
 
 let condensedData = JSON.parse(fs.readFileSync('json/nuclearDataSimple.json', 'utf-8'))
