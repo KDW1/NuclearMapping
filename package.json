@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "start": "concurrently \"npm i\" \"npm run watch-css\" \"nodemon .\"",
+    "start": "concurrently \"npm run watch-css\" \"nodemon .\"",
     "build-css": "tailwindcss -i ./input/input.css -o ./public/index.css",
     "watch-css": "tailwindcss -i ./input/input.css -o ./public/index.css --watch"
   },
