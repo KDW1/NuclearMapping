@@ -36,6 +36,9 @@ app.get('/', (req, res) => {
     })
 })
 
+app.use('/worldMap', (req, res) => {
+    res.render('worldMap');
+})
 app.get('/table/:tableNum', (req, res) => {
     let num = parseInt(req.params.tableNum) - 1;
     updateInfo();
