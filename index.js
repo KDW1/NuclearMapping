@@ -68,6 +68,24 @@ app.get('/table/:tableNum', (req, res) => {
 
 app.get('/country/:country', (req, res) => {
     let country = req.params.country;
+    if(country == "Taiwan") {
+        country = "Taiwan, province of China";
+    } else if(country == "Russian Federation") {
+        country = "Russia";
+    } else if(country == "Republic of Korea") {
+        country = "South Korea";
+    } else if(country =="Dem. Rep. Korea") {
+        country = "North Korea";
+    } else if(country == "Brunei Darussalam") {
+        country = "Brunei";
+    } else if(country == "The Gambia") {
+        country = "Gambia";
+    } else if(country == "Equatorial Guinea") {
+        country = "Guinea";
+    } else if(country == "Lao PDR") {
+        country = "Laos";
+    }
+
     let population;
     let countryPresent = false;
     countries.forEach((data) => {
