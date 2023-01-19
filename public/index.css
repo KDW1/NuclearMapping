@@ -536,6 +536,11 @@ video {
   margin-bottom: 0.5rem;
 }
 
+.my-auto {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
 .mt-4 {
   margin-top: 1rem;
 }
