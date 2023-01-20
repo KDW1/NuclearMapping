@@ -85,6 +85,7 @@ app.get('/country/:country', (req, res) => {
     } else if(country == "Lao PDR") {
         country = "Laos";
     }
+    
 
     let population;
     let countryPresent = false;
