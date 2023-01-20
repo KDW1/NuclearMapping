@@ -41,14 +41,28 @@ app.use('/worldMap', (req, res) => {
 })
 
 app.use('/worldTable/:tableNum', (req, res) => {
+    //Make sure the table is one that includes nations
     let num = parseInt(req.params.tableNum) - 1;
+    if(num <= 0 || num > 13) {
+        res.redirect('worldMap'); //Invalid table index :(
+    }
+    let containsCountries = false;
     updateInfo();
     let table = tables[num];
-    console.log("\n\nTable:");
     console.log(table);
-    res.render('worldMap', {
-        table: table
-    });
+    if(table.metrics[0] == 'Nations' || table.metrics[0] == 'Nation') {
+        containsCountries = true;
+    }
+    if(containsCountries) {
+        // console.log("\n\nTable:");
+        // console.log(table);
+        res.render('worldMap', {
+            table: table
+        });
+    } else {
+        console.log("No countries involved....");
+        res.redirect('worldMap');
+    }
 })
 
 app.get('/table/:tableNum', (req, res) => {
@@ -134,7 +148,7 @@ app.post('/country', (req, res) => {
 
 app.listen(process.env.PORT || port, function(err){
     if (err) console.log(err);
-    console.log("Server listening on PORT", process.env.PORT);
+    console.log("Server listening on PORT", process.env.PORT || port);
 });
 
 function tablesOf(country, listOfTables) {
