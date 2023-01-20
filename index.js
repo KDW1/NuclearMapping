@@ -39,6 +39,18 @@ app.get('/', (req, res) => {
 app.use('/worldMap', (req, res) => {
     res.render('worldMap');
 })
+
+app.use('/worldTable/:tableNum', (req, res) => {
+    let num = parseInt(req.params.tableNum) - 1;
+    updateInfo();
+    let table = tables[num];
+    console.log("\n\nTable:");
+    console.log(table);
+    res.render('worldMap', {
+        table: table
+    });
+})
+
 app.get('/table/:tableNum', (req, res) => {
     let num = parseInt(req.params.tableNum) - 1;
     updateInfo();
