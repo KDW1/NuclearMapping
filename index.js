@@ -34,6 +34,8 @@ app.get('/', (req, res) => {
     res.render('index', {
         tables: smallTables
     })
+    /*Make worldMap the default version, and then you switch to "text" mode. Also add search country box to 
+    world map section */
 })
 
 app.use('/worldMap', (req, res) => {

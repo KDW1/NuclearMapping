@@ -29,7 +29,7 @@
                 "150 Tg + tw"
             ],
             "title": "Livestock Case",
-            "unit": "% reduction",
+            "unit": "% change in caloric production",
             "numberedIndex": 2
         },
         "tableThree": {
@@ -47,7 +47,7 @@
                 "150 Tg + tw"
             ],
             "title": "Partial Livestock Case (50% livestock feed to human consumption, 50% livestock feed to livestock)",
-            "unit": "% reduction",
+            "unit": "% change in caloric production",
             "numberedIndex": 3
         },
         "tableFour": {
@@ -65,7 +65,7 @@
                 "150 Tg + tw"
             ],
             "title": "No Livestock Case (50% livestock feed to human consumption)",
-            "unit": "% reduction",
+            "unit": "% change in caloric production",
             "numberedIndex": 4
         }
     },
@@ -83,7 +83,7 @@
                 "150 Tg"
             ],
             "title": "Calorie reduction from the major food crops and marine fish in nations with nuclear weapons.",
-            "unit": "% reduction",
+            "unit": "% change in caloric production",
             "numberedIndex": 5
         },
         "tableTwo": {
@@ -99,7 +99,7 @@
                 "150 Tg"
             ],
             "title": "Calorie reduction from the major food crops and marine fish in all nations calculated.",
-            "unit": "% reduction",
+            "unit": "% change in caloric production",
             "numberedIndex": 6
         },
         "tableThree": {
