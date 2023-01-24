@@ -17,16 +17,21 @@
               <!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
            <path id="homebtn" d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40H456c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1H416 392c-22.1 0-40-17.9-40-40V448 384c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32v64 24c0 22.1-17.9 40-40 40H160 128.1c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2H104c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9 .1-2.8V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z"/>
         </svg>
-     </a>
-     <a href="/table/<%= locals.table.numberedIndex %> ">
-        <svg class="px-4 py-4 mx-auto bg-white rounded-xl h-12 mt-4 mb-2 cursor-pointer hover:-rotate-12 hover:-translate-x-2 hover:-translate-y-1 transition duration-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-           <!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
-           <path d="M64 256V160H224v96H64zm0 64H224v96H64V320zm224 96V320H448v96H288zM448 256H288V160H448v96zM64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64z"/>
-        </svg>
-     </a>
+      </a>
+      <% if(locals.table) { %>
+         <a href="/table/<%= locals.table.numberedIndex %> ">
+           <svg class="px-4 py-4 mx-auto bg-white rounded-xl h-12 mt-4 mb-2 cursor-pointer hover:-rotate-12 hover:-translate-x-2 hover:-translate-y-1 transition duration-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+              <path d="M64 256V160H224v96H64zm0 64H224v96H64V320zm224 96V320H448v96H288zM448 256H288V160H448v96zM64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64z"/>
+           </svg>
+         </a>
+      <% } %> 
    </div>
    <% if(locals.table) { %>
-      <p class="mx-auto text-center mb-2 w-3/4 text-3xl text-white font-bold">
+      <p class="mx-auto text-center mb-2 w-1/2 text-xl md:text-2xl lg:text-3xl text-white font-bold border-b-4 border-white">
+         Table #<%= locals.table.numberedIndex %> 
+      </p>
+      <p class="mx-auto text-center mb-2 w-3/4 text-base md:text-xl lg:text-3xl text-white font-bold">
          <%= locals.table.title %> 
       </p>
       <div class="mx-auto">
@@ -46,7 +51,7 @@
          </p> 
       </div>
    <% } %>  
-   <svg id="world" class="my-auto relative" viewBox="0 0 2000 857" xmlns="http://www.w3.org/2000/svg">
+   <svg id="world" class="my-auto relative mb-5" viewBox="0 0 2000 857" xmlns="http://www.w3.org/2000/svg">
         <g>
            <path class="Fiji" d="M 1994.4 606 1994 606.4 1993.2 607.5 1992.9 607.6 1992.2 608 1992 608.6 1991.6 608.8 1991.4 609.1 1991.3 609.3 1991.6 609.4 1992.2 609.1 1992.3 609 1992.6 608.7 1992.8 608.4 1993.4 608.1 1993.7 607.8 1994.3 607.5 1994.3 607.8 1993.8 608.5 1993.6 608.6 1993.7 609.2 1993.4 609.5 1993.1 609.2 1992.7 609.2 1992.2 609.3 1991.8 609.6 1991.1 609.7 1990.1 609.7 1990.6 609.2 1990.2 609 1989.6 609.2 1989.2 609.4 1989.2 609.6 1988.9 609.7 1988.7 609.8 1988.6 610.2 1988.4 610.5 1988.1 610.4 1988.1 610.2 1987.7 610.1 1987.3 610.3 1987.1 610.8 1986.8 611 1986.5 611 1986.5 610.7 1986.5 610.3 1986.3 609.9 1986.4 609.7 1986.3 609.6 1985.7 609.8 1985.7 609.4 1986.1 609.1 1986.2 609.1 1986.1 608.6 1986.4 608.5 1986.9 608.8 1987.5 608.4 1987.7 608.4 1988 608.1 1988.2 608.1 1988.5 607.8 1988.5 607.6 1989.3 607.5 1990.2 607.2 1990.5 607.1 1990.9 607.2 1991.4 607 1991.6 606.6 1991.8 606.6 1992 606.2 1992.4 606.3 1992.5 606.1 1992.7 606.2 1993.7 605.7 1993.8 606 1994 605.9 1994.2 606 1994.5 605.7 1995 605.5 1995.1 605.6 1994.6 606 1994.4 606 Z" onclick="location.href = '/country/Fiji'"></path>
            <path class="Fiji" d="M 1993.4 611 1993.2 610.8 1993.3 610.6 1993.8 610.1 1994.1 609.6 1993.8 610.7 1993.4 611 Z" onclick="location.href = '/country/Fiji'"></path>
@@ -1073,16 +1078,11 @@
         </circle>
    </svg>
    <% if(locals.table) { %>
-        <pre>
-            <!-- <%= locals.table %>  -->
-            <%= JSON.stringify(locals.table, null, 4) %> 
-        </pre>
-   <% } %>  
-   <% if(locals.table) { %>
       <script>
          let metricElem = document.getElementById("metric");
          let currentMetric = metricElem.value;
          let percentThresholds = [0, 25, 50, 75];
+         let thresholds = [0, 0.25, 0.5, 0.75];
          metricElem.addEventListener('change', (e) => {
             currentMetric = metricElem.value;
             console.log("Metric is now: " + currentMetric + "\n\n");
@@ -1097,12 +1097,49 @@
          colorCountries();
 
          function colorCountries() {
-            if(unit = '% change in caloric production') {
+            if(unit == '% change in caloric production') {
+               let index = metrics.indexOf(currentMetric);
+               console.log("Current Index for Values is " + index);
                data.forEach((data) => {
-                  let index = metrics.indexOf(currentMetric);
-                  console.log("Current Index for Values is " + index);
                   let percentVal = data[index];
                   let result = evaluate(percentVal, "percent");
+                  let name = data[0];
+                  if(name == 'Brunei') {
+                     name = "Brunei Darussalam";
+                  }
+                  if(name == 'Taiwan, province of China') {
+                     name = "Taiwan";
+                  }
+                  let vals = document.getElementsByName(name);
+                  let countryClass = name.split(' ')[0];
+                  let valsTwo = document.querySelectorAll(`path.${countryClass}`);
+                  vals.forEach((elem) => { 
+                     elem.classList.remove('color0');
+                     elem.classList.remove('color1');
+                     elem.classList.remove('color2');
+                     elem.classList.remove('color3');
+                     elem.classList.remove('color4');
+                     elem.classList.add(`color${result}`);
+                     elem.classList.add(`colored`);
+                  })
+                  valsTwo.forEach((elem) => {
+                     elem.classList.remove('color0');
+                     elem.classList.remove('color1');
+                     elem.classList.remove('color2');
+                     elem.classList.remove('color3');
+                     elem.classList.remove('color4');
+                     elem.classList.add(`color${result}`);
+                     elem.parentElement.classList.add(`colored`);
+                  })
+               });
+            } 
+            if(unit == 'million people') {
+               let index = metrics.indexOf(currentMetric);
+               console.log("Current Index for Values is " + index);
+               data.forEach((data) => {
+                  console.log(`Nation is ${data[0]} and Population is ${data[1]}, those harmed are ${data[index]}`);
+                  let people = data[index];
+                  let result = evaluate([data[1], people], "millions");
                   let name = data[0];
                   if(name == 'Brunei') {
                      name = "Brunei Darussalam";
@@ -1135,8 +1172,9 @@
             }
          }
 
-         function evaluate(val, mode) {
+         function evaluate(data, mode) {
             if(mode == "percent") {
+               let val = data;
                for(let i = 0; i < percentThresholds.length+1; i++) {
                   let lowerBound = percentThresholds[i] ?? null;
                   let upperBound = percentThresholds[i-1] ?? null;
@@ -1156,8 +1194,30 @@
                      return i;
                   }
                }
-            } else if(mode == "") {
-               
+            } else if(mode == "millions") {
+               let percentage = data[1]/data[0]; //Those harmed over total 
+               console.log(thresholds);
+               for(let i = 0; i < thresholds.length+1; i++) {
+                  let lowerBound = (i != thresholds.length) ? thresholds[i - 1] : null;
+                  let upperBound = (i != thresholds.length) ? thresholds[i] : null;
+                  console.log(`Lower Bound: ${lowerBound} and Upper Bound: ${upperBound}`);
+                  if(i == 0) {
+                     if(percentage <= upperBound + 0.05) {
+                        console.log(`${percentage} is greater/equal than ${lowerBound}`);
+                        return 0;
+                     }
+                     console.log("Not more than");
+                  } else if(i == thresholds.length) {
+                     if(percentage >= upperBound) {
+                        console.log(`${percentage} is less than ${upperBound}`);
+                        return i;
+                     }
+                  }
+                  if(percentage >= lowerBound && percentage < upperBound) {
+                     console.log(`${percentage} is greater than ${lowerBound} and less than ${upperBound}`);
+                     return i;
+                  }
+               }
             }
          }
          //Above 0% 1
@@ -1170,35 +1230,6 @@
    <script>
         let paths = document.getElementsByTagName("path");
         let group;
-
-        // Processes for grouping archipelago, island and other nations...
-        // for(let i = 0; i < paths.length; i++) {
-        //     let path = paths[i];
-        //     if(path.classList != '') {
-        //         // console.log(path.classList.toString()
-        //         let countryName = path.classList.toString();
-        //         let link = '/country/' + countryName;
-        //         group = document.querySelectorAll('g#' + countryName.split(' ')[0]);
-        //         console.log('g#' + countryName.split(' ')[0]);
-        //         if(group.length != 0) {
-        //             group.item(0).prepend(path);
-        //             console.log(group.item(0));
-        //         } else {
-        //             // document.getElementById("world").firstChild.id = 'country';
-        //             document.getElementById("world").prepend(document.createElement('g'));
-        //             // document.getElementById("world").firstChild.classList.add('country');
-        //             document.getElementById("world").firstChild.prepend(path);
-        //             document.getElementById("world").firstChild.id = countryName.split(' ')[0];
-        //         }
-        //         path.setAttribute('onclick', `location.href = '${link}'`);
-        //     } else if(path.id != '') {
-        //         // console.log(path.attributes.name.value)
-        //         let name = path.getAttribute("name");
-        //         let link = '/country/' + name;
-        //         path.setAttribute('onclick', `location.href = '${link}'`);
-        //     }
-        // }
-        // document.getElementById("world").firstChild.id = "country";
    </script>
    <% if(locals.table) { %>
       <style>
@@ -1232,11 +1263,11 @@
          }
 
          g.colored:hover path.color0 {
-            fill: #feffb5 !important;
+            fill: #fdff86 !important;
          }
 
          .color0:hover {
-            fill: #feffb5 !important;
+            fill: #fdff86 !important;
          }
 
          .color1 {
@@ -1256,11 +1287,11 @@
          }
          
          g.colored:hover path.color2 {
-            fill: #ffe07c !important;
+            fill: #ffbc2c !important;
          }
 
          .color2:hover {
-            fill: #ffe07c !important;
+            fill: #ffbc2c !important;
          }
 
          .color3 {
@@ -1268,11 +1299,11 @@
          }
          
          g.colored:hover path.color3 {
-            fill: #f57328 !important;
+            fill: #f55128 !important;
          }
 
          .color3:hover {
-            fill: #f57328 !important;
+            fill: #f55128 !important;
          }
 
          .color4 {

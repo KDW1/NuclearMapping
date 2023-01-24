@@ -118,6 +118,7 @@ app.get('/country/:country', (req, res) => {
     let population;
     let countryPresent = false;
     countries.forEach((data) => {
+        if(data[1] == 'S') console.log(data);
         if(data[0].toLowerCase() == country.toLowerCase()) {
             // console.log(data[1])
             population = data[1];

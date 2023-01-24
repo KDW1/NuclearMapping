@@ -33,11 +33,15 @@
     <% if(locals.tables) { %>
         <div class="mb-4 shadow-xl shadow-orange-400 relative mx-auto px-8 py-4 w-5/6 sm:w-1/2 bg-white rounded-xl">
             <p class="text-3xl font-semibold text-center"><%= locals.country %></p>
-            <p class="text-base text-center"><%= locals.population %> million people</p>
+            <% if(locals.population != "Not provided") { %>
+                <p class="text-base text-center"><%= locals.population %> million people</p>
+            <% } else { %>
+                <p class="text-base text-center"><span class="font-bold">*</span>Not provided</p>
+            <% } %>   
             <p class="mt-2 text-base text-center"><strong>*</strong>You can click on a table name to see all other tables like it</p>
         </div>
         <% locals.tables.forEach((data, i) => { %>
-            <div onclick="location.href = '/table/<%=data.numberedIndex%>'" class="cursor-pointer mb-6 shadow-xl shadow-orange-400 relative mx-auto px-8 py-4 w-5/6 sm:w-1/2 bg-white rounded-xl hover:scale-105 transition-all duration-300">
+            <div id="table<%= data.numberedIndex %>" onclick="location.href = '/table/<%=data.numberedIndex%>'" class="cursor-pointer mb-6 shadow-xl shadow-orange-400 relative mx-auto px-8 py-4 w-5/6 sm:w-1/2 bg-white rounded-xl hover:scale-105 transition-all duration-300">
                 <p class="text-3xl font-semibold text-start line-clamp-2 w-3/4"><%= data.title %></p>
                 <p class="text-xl mt-2 text-start mb-2">Table <%= data.numberedIndex %></p>
                 <canvas class="mb-4" id="myChart<%= i %>"></canvas>
@@ -99,5 +103,16 @@
     <% } else { %>
         <p class="text-center text-3xl mt-4 font-bold relative text-white">Sorry, the country <%= locals.country %> isn't listed...</p>
     <% } %>  
+    <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+    </script>
 </body>
 </html>
