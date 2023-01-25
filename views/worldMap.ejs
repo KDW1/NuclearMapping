@@ -49,6 +49,69 @@
          <p class="block mb-4 mx-auto w-min min-w-max text-base text-white font-semibold">
             Unit: <%= locals.table.unit %> 
          </p> 
+         <div class="flex-col md:flex-row md:flex mx-auto min-w-max w-min space-y-2 md:space-x-4 mb-4">
+            <div></div>
+            <div class="flex">
+               <div class="h-8 w-8 bg-white rounded-md">
+   
+               </div>
+               <p class="text-white text-lg ml-2 font-semibold">
+                  <% if(locals.table.unit == '% change in caloric production') { %>
+                     more than 0%
+                  <% } else { %>
+                     less than 0%
+                  <% } %>   
+               </p>
+            </div>
+            <div class="flex">
+               <div class="h-8 w-8 bg-[#fdff83] rounded-md">
+   
+               </div>
+               <p class="text-white text-lg ml-2 font-semibold">
+                  <% if(locals.table.unit == '% change in caloric production') { %>
+                     0% to 25%
+                  <% } else { %>
+                     0% to -25%
+                  <% } %>   
+               </p>
+            </div>
+            <div class="flex">
+               <div class="h-8 w-8 bg-[#ffdf2c] rounded-md">
+   
+               </div>
+               <p class="text-white text-lg ml-2 font-semibold">
+                  <% if(locals.table.unit == '% change in caloric production') { %>
+                     25% to 50%
+                  <% } else { %>
+                     -25% to -50%
+                  <% } %>   
+               </p>
+            </div>
+            <div class="flex">
+               <div class="h-8 w-8 bg-[#ff9531] rounded-md">
+   
+               </div>
+               <p class="text-white text-lg ml-2 font-semibold">
+                  <% if(locals.table.unit == '% change in caloric production') { %>
+                     50% to 75%
+                  <% } else { %>
+                     -50% to -75%
+                  <% } %> 
+               </p>
+            </div>
+            <div class="flex">
+               <div class="h-8 w-8 bg-[#ff2929] rounded-md">
+   
+               </div>
+               <p class="text-white text-lg ml-2 font-semibold">
+                  <% if(locals.table.unit == '% change in caloric production') { %>
+                     75%+
+                  <% } else { %>
+                     -75%-
+                  <% } %> 
+               </p>
+            </div>
+         </div>
       </div>
    <% } %>  
    <svg id="world" class="my-auto relative mb-5" viewBox="0 0 2000 857" xmlns="http://www.w3.org/2000/svg">
