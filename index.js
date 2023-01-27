@@ -154,6 +154,11 @@ app.listen(process.env.PORT || port, function(err){
     console.log("Server listening on PORT", process.env.PORT || port);
 });
 
+
+app.get('*', (req, res) => {
+    res.render('error');
+})
+
 function tablesOf(country, listOfTables) {
     let t = [];
     listOfTables.forEach((tab) => {
