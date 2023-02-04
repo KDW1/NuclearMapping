@@ -41,7 +41,7 @@
             <p class="mt-2 text-base text-center"><strong>*</strong>You can click on a table name to see all other tables like it</p>
         </div>
         <% locals.tables.forEach((data, i) => { %>
-            <div id="table<%= data.numberedIndex %>" onclick="location.href = '/table/<%=data.numberedIndex%>'" class="cursor-pointer mb-6 shadow-xl shadow-orange-400 relative mx-auto px-8 py-4 w-5/6 sm:w-1/2 bg-white rounded-xl hover:scale-105 transition-all duration-300">
+            <div id="table<%= data.numberedIndex %>" onclick="location.href = '/worldTable/<%=data.numberedIndex%>'" class="cursor-pointer mb-6 shadow-xl shadow-orange-400 relative mx-auto px-8 py-4 w-5/6 sm:w-1/2 bg-white rounded-xl hover:scale-105 transition-all duration-300">
                 <p class="text-3xl font-semibold text-start line-clamp-2 w-3/4"><%= data.title %></p>
                 <p class="text-xl mt-2 text-start mb-2">Table <%= data.numberedIndex %></p>
                 <canvas class="mb-4" id="myChart<%= i %>"></canvas>

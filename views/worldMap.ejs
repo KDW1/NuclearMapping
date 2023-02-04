@@ -27,6 +27,12 @@
          </a>
       <% } %> 
    </div>
+   <div class="px-8 py-4 mb-6 shadow-xl shadow-orange-400 relative bg-white w-min min-w-max mx-auto rounded-md mt-4  hover:-translate-y-2 ease-in-out transition duration-300">
+       <form class="mx-auto w-min" action="/country" method="post">
+           <label class="text-center block font-medium text-lg align-baseline" for="">Search by Country:</label>
+           <input class="mt-2 mx-auto px-2 py-1 rounded align-baseline border-2" name="country" type="text">
+       </form>
+   </div>
    <% if(locals.table) { %>
       <p class="mx-auto text-center mb-2 w-1/2 text-xl md:text-2xl lg:text-3xl text-white font-bold border-b-4 border-white">
          Table #<%= locals.table.numberedIndex %> 

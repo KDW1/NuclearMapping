@@ -95,23 +95,27 @@ app.get('/table/:tableNum', (req, res) => {
 })
 
 app.get('/country/:country', (req, res) => {
-    let country = req.params.country;
-    if(country == "Taiwan") {
+    let country = req.params.country.trim();
+    country = country.replace(/\s+/gm, " ");
+    console.log(country);
+    if(country.toLowerCase() == "Taiwan".toLowerCase()) {
         country = "Taiwan, province of China";
-    } else if(country == "Russian Federation") {
+    } else if(country.toLowerCase() == "Russian Federation".toLowerCase()) {
         country = "Russia";
-    } else if(country == "Republic of Korea") {
+    } else if(country.toLowerCase() == "Republic of Korea".toLowerCase()) {
         country = "South Korea";
-    } else if(country =="Dem. Rep. Korea") {
+    } else if(country.toLowerCase() == "Dem. Rep. Korea".toLowerCase()) {
         country = "North Korea";
-    } else if(country == "Brunei Darussalam") {
+    } else if(country.toLowerCase() == "Brunei Darussalam".toLowerCase()) {
         country = "Brunei";
-    } else if(country == "The Gambia") {
+    } else if(country.toLowerCase() == "The Gambia".toLowerCase()) {
         country = "Gambia";
-    } else if(country == "Equatorial Guinea") {
+    } else if(country.toLowerCase() == "Equatorial Guinea".toLowerCase()) {
         country = "Guinea";
-    } else if(country == "Lao PDR") {
+    } else if(country.toLowerCase() == "Lao PDR".toLowerCase()) {
         country = "Laos";
+    } else if(country.toLowerCase() == "The United States".toLowerCase()) {
+        country = "United States;"
     }
     
 
