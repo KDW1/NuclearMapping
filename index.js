@@ -96,6 +96,7 @@ app.get('/table/:tableNum', (req, res) => {
 
 app.get('/country/:country', (req, res) => {
     let country = req.params.country.trim();
+    console.log(country);
     country = country.replace(/\s+/gm, " ");
     console.log(country);
     if(country.toLowerCase() == "Taiwan".toLowerCase()) {
@@ -115,7 +116,7 @@ app.get('/country/:country', (req, res) => {
     } else if(country.toLowerCase() == "Lao PDR".toLowerCase()) {
         country = "Laos";
     } else if(country.toLowerCase() == "The United States".toLowerCase()) {
-        country = "United States;"
+        country = "United States";
     }
     
 
