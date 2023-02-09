@@ -9,7 +9,7 @@
     <%- include('chartJs.ejs') %> 
     <%- include('style.ejs') %> 
 </head>
-<body class="bg-yellow-400">
+<body class="bg-main">
     <div class="mx-4 my-2">
         <div class="mx-auto w-min min-w-max">
             <a href="/">
@@ -27,11 +27,11 @@
                 </a>
             <% } %>  
         </div>
-        <div class="shadow-xl shadow-orange-400 relative mx-auto px-8 py-4 w-3/4 bg-white rounded-xl">
+        <div class="shadow-xl shadow-shade relative mx-auto px-8 py-4 w-3/4 bg-white rounded-xl">
             <p class="text-xl sm:text-3xl font-semibold text-center line-clamp-2"><%= locals.table.title %></p>
             <p class="text-xs sm:text-base mt-2 text-center"><%= locals.table.description %> </p>
         </div>
-        <div class="mb-12 shadow-xl shadow-orange-400 relative mx-auto px-8 py-4 w-3/4 bg-white rounded-xl mt-4">
+        <div class="mb-12 shadow-xl shadow-shade relative mx-auto px-8 py-4 w-3/4 bg-white rounded-xl mt-4">
             <p class="mt-8 text-xl sm:text-3xl font-semibold text-center">Table #<%= locals.num %></p>
             <% if(locals.table.unit != '') { %>
                 <p class="text-base sm:text-xl text-center">Unit: <%= locals.table.unit %> </p>

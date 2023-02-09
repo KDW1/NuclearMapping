@@ -8,7 +8,7 @@
     <%- include('chartJs.ejs') %> 
     <%- include('style.ejs') %> 
 </head>
-<body class="bg-yellow-400">
+<body class="bg-main">
     <div class="mx-auto w-min min-w-max">
         <a href="/">
             <svg class="px-4 py-4 bg-white rounded-xl h-12 inline-block mt-4 mb-2 cursor-pointer hover:-rotate-12 hover:-translate-x-2 hover:-translate-y-1 transition duration-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
@@ -24,14 +24,14 @@
         </a>
     </div>
     <p class="block sm:hidden text-center text-lg mt-4 font-semibold w-3/4 mx-auto relative text-white"><strong>*</strong> Best quality can be seen on bigger screens....</p>
-    <div class="px-12 py-4 mb-4 shadow-xl shadow-orange-400 relative bg-white w-min min-w-max mx-auto rounded-md mt-4 hover:-translate-y-2 ease-in-out transition duration-300">
+    <div class="px-12 py-4 mb-4 shadow-xl shadow-shade relative bg-white w-min min-w-max mx-auto rounded-md mt-4 hover:-translate-y-2 ease-in-out transition duration-300">
         <form class="mx-auto w-min" action="/country" method="post">
             <label class="text-center block font-medium text-xl w-max align-baseline" for="">Search by Country:</label>
             <input class="mt-2 mx-auto border px-2 py-2 rounded align-baseline w-full" name="country" type="text">
         </form>
     </div>
     <% if(locals.tables) { %>
-        <div class="mb-4 shadow-xl shadow-orange-400 relative mx-auto px-8 py-4 w-5/6 sm:w-1/2 bg-white rounded-xl">
+        <div class="mb-4 shadow-xl shadow-shade relative mx-auto px-8 py-4 w-5/6 sm:w-1/2 bg-white rounded-xl">
             <p class="text-3xl font-semibold text-center"><%= locals.country %></p>
             <% if(locals.population != "Not provided") { %>
                 <p class="text-base text-center"><%= locals.population %> million people</p>
@@ -41,7 +41,7 @@
             <p class="mt-2 text-base text-center"><strong>*</strong>You can click on a table name to see all other tables like it</p>
         </div>
         <% locals.tables.forEach((data, i) => { %>
-            <div id="table<%= data.numberedIndex %>" onclick="location.href = '/worldTable/<%=data.numberedIndex%>'" class="cursor-pointer mb-6 shadow-xl shadow-orange-400 relative mx-auto px-8 py-4 w-5/6 sm:w-1/2 bg-white rounded-xl hover:scale-105 transition-all duration-300">
+            <div id="table<%= data.numberedIndex %>" onclick="location.href = '/worldTable/<%=data.numberedIndex%>'" class="cursor-pointer mb-6 shadow-xl shadow-shade relative mx-auto px-8 py-4 w-5/6 sm:w-1/2 bg-white rounded-xl hover:scale-105 transition-all duration-300">
                 <p class="text-3xl font-semibold text-start line-clamp-2 w-3/4"><%= data.title %></p>
                 <p class="text-xl mt-2 text-start mb-2">Table <%= data.numberedIndex %></p>
                 <canvas class="mb-4" id="myChart<%= i %>"></canvas>

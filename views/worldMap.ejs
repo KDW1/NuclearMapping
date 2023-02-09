@@ -7,7 +7,7 @@
     <title>Document</title>
     <%- include('style.ejs') %> 
 </head>
-<body class="bg-yellow-400">
+<body class="bg-main">
 
     <!--In this svg, countries represented by one body are IDed and those represented by multiple bodies are classes-->
     <!--TODO: Recieve data and color nations based on percentage of people who died -->
@@ -27,7 +27,7 @@
          </a>
       <% } %> 
    </div>
-   <div class="px-8 py-4 mb-6 shadow-xl shadow-orange-400 relative bg-white w-min min-w-max mx-auto rounded-md mt-4  hover:-translate-y-2 ease-in-out transition duration-300">
+   <div class="px-8 py-4 mb-6 shadow-xl shadow-shade relative bg-white w-min min-w-max mx-auto rounded-md mt-4  hover:-translate-y-2 ease-in-out transition duration-300">
        <form class="mx-auto w-min" action="/country" method="post">
            <label class="text-center block font-medium text-lg align-baseline" for="">Search by Country:</label>
            <input class="mt-2 mx-auto px-2 py-1 rounded align-baseline border-2" name="country" type="text">
@@ -47,7 +47,7 @@
          <p class="block mx-auto w-min text-2xl text-white font-bold">
             Metrics:
          </p>
-         <select id="metric" class="block outline-none mx-auto text-center mt-2 mb-2 px-2 rounded-lg w-min shadow-red-500/50 shadow-xl transition duration-400 hover:scale-105 hover:-translate-y-1">
+         <select id="metric" class="block outline-none mx-auto text-center mt-2 mb-2 px-2 rounded-lg w-min shadow-shade/75 shadow-xl transition duration-400 hover:scale-105 hover:-translate-y-1">
               <% locals.table.metrics.forEach((metric) => { %>
                   <% if(metric != "Nations" && metric != "Nation" && metric != "Population") { %> 
                       <option><%= metric %></option>
@@ -1310,7 +1310,7 @@
       <style>
          /*Background color is #facc15*/
          svg#world path{
-            fill: rgb(245, 194, 27);
+            fill: #ca1a46;
             transition: 0.25s;
             stroke: none;
          }
@@ -1319,18 +1319,18 @@
       <style>
          svg#world path{
             fill: #fff;
-            stroke: #f43f5e;
+            stroke: #b4085e;
             transition: 0.25s;
          }
       </style>
    <% } %> 
     <style>
          svg#world g:hover path{
-            fill: #f0ec28;
+            fill: #e22b43;
          } 
 
          svg#world path:hover{
-            fill: #f0ec28;
+            fill: #e22b43;
          }
 
          .color0 {
@@ -1350,11 +1350,11 @@
          }
 
          g.colored:hover path.color1 {
-            fill: #ffe883 !important;
+            fill: #ffe864 !important;
          }
 
          .color1:hover {
-            fill: #ffe883 !important;
+            fill: #ffe864 !important;
          }
 
          .color2 {
@@ -1362,11 +1362,11 @@
          }
          
          g.colored:hover path.color2 {
-            fill: #ffbc2c !important;
+            fill: #ffb71c !important;
          }
 
          .color2:hover {
-            fill: #ffbc2c !important;
+            fill: #ffb71c !important;
          }
 
          .color3 {

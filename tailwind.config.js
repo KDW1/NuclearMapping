@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+const colors = require('tailwindcss/colors');
+
 module.exports = {
   content: [
     './**/*.ejs'
@@ -24,7 +26,12 @@ module.exports = {
       // => @media (min-width: 1536px) { ... }
     },
     display: ['group-hover'],
-    extend: {},
+    extend: {
+      colors: {
+        main: colors.rose[700],
+        shade: colors.red[900],
+      },
+    },
   },
   plugins: [
     require('@tailwindcss/line-clamp'),
