@@ -1,21 +1,21 @@
 {
+  "name": "y",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "start": "concurrently \"npm run watch-css\" \"nodemon .\"",
-    "build-css": "tailwindcss -i ./input/input.css -o ./public/index.css",
-    "watch-css": "tailwindcss -i ./input/input.css -o ./public/index.css --watch"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
-    "@tailwindcss/line-clamp": "^0.4.2",
-    "body-parser": "^1.20.1",
-    "concurrently": "^7.6.0",
-    "docx-parser": "^0.2.1",
-    "docx4js": "^3.2.20",
-    "dotenv": "^16.0.3",
-    "ejs": "^3.1.8",
-    "express": "^4.18.2",
-    "fs": "^0.0.1-security",
-    "nodemon": "^2.0.20",
-    "tailwindcss": "^3.2.4",
-    "word-extractor": "^1.0.4"
+    "autoprefixer": "10.4.14",
+    "eslint": "8.46.0",
+    "eslint-config-next": "13.4.12",
+    "next": "13.4.12",
+    "postcss": "8.4.27",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "tailwindcss": "3.3.3"
   }
 }
