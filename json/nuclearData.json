@@ -1,6 +1,5 @@
-{
-    "firstFile": {
-        "tableOne": {
+[
+        {
             "data": [
                 [
                     "16 Tg",
@@ -57,7 +56,7 @@
             "unit": "",
             "numberedIndex": 1
         },
-        "tableTwo": {
+        {
             "data": [
                 [
                     "France",
@@ -175,7 +174,7 @@
             "unit": "% change in caloric production",
             "numberedIndex": 2
         },
-        "tableThree": {
+        {
             "data": [
                 [
                     "France",
@@ -293,7 +292,7 @@
             "unit": "% change in caloric production",
             "numberedIndex": 3
         },
-        "tableFour": {
+        {
             "data": [
                 [
                     "France",
@@ -410,10 +409,8 @@
             "title": "No Livestock Case (50% livestock feed to human consumption)",
             "unit": "% change in caloric production",
             "numberedIndex": 4
-        }
-    },
-    "secondFile": {
-        "tableOne": {
+        },
+        {
             "data": [
                 [
                     "France",
@@ -511,7 +508,7 @@
             "unit": "% change in caloric production",
             "numberedIndex": 5
         },
-        "tableTwo": {
+        {
             "data": [
                 [
                     "Albania",
@@ -2031,7 +2028,7 @@
             "unit": "% change in caloric production",
             "numberedIndex": 6
         },
-        "tableThree": {
+        {
             "data": [
                 [
                     "Reduction in vegetables, fruit and nuts",
@@ -2081,7 +2078,7 @@
             "unit": "",
             "numberedIndex": 7
         },
-        "tableFour": {
+        {
             "data": [
                 [
                     "Albania",
@@ -4093,7 +4090,7 @@
             "unit": "million people",
             "numberedIndex": 8
         },
-        "tableFive": {
+        {
             "data": [
                 [
                     "Albania",
@@ -6105,7 +6102,7 @@
             "unit": "million people",
             "numberedIndex": 9
         },
-        "tableSix": {
+        {
             "data": [
                 [
                     "Albania",
@@ -8117,7 +8114,7 @@
             "unit": "million people",
             "numberedIndex": 10
         },
-        "tableSeven": {
+        {
             "data": [
                 [
                     "Albania",
@@ -10129,7 +10126,7 @@
             "unit": "million people",
             "numberedIndex": 11
         },
-        "tableEight": {
+        {
             "data": [
                 [
                     "Albania",
@@ -12141,7 +12138,7 @@
             "unit": "million people",
             "numberedIndex": 12
         },
-        "tableNine": {
+        {
             "data": [
                 [
                     "Albania",
@@ -14153,5 +14150,4 @@
             "unit": "million people",
             "numberedIndex": 13
         }
-    }
-}
+]
