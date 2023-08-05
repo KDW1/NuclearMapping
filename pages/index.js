@@ -36,30 +36,32 @@ export default function Home() {
         <div className="mb-12 px-12 pt-4 pb-8 shadow-xl shadow-shade relative bg-white mt-4 w-11/12 md:w-3/4 rounded-xl mx-auto">
             <p className="text-center text-4xl mt-6 font-semibold">Tables:</p>
             <p className="mt-2 text-base text-center"><strong>*</strong>You can click the sections to see tables fully</p>
+            
+{
+  simpleTables.map((table, i) => (
+    <div key={`table${i}`}>
+    {
+      table.metrics[0] == "Nation" || table.metrics[0] == "Nations" ? 
+      <Link href={`/worldTable/${i+1}`}>
+        <div className="hover:scale-105 bg-white w-full px-4 py-2 transition duration-300 ease-in-out cursor-pointer mt-12 mx-auto border-b-2 pb-4">
+          <p className="text-3xl font-semibold line-clamp-1">{table.title}:</p>
+            <p className="text-lg line-clamp-3 mt-2">{table.description}</p>
         </div>
-        {
-              simpleTables.map((table, i) => (
-                <>
-                {
-                  table.metrics[0] == "Nation" || table.metrics[0] == "Nations" ? 
-                  <Link href={`/worldTable/${i+1}`}>
-                    <div className="hover:scale-105 w-11/12 md:w-3/5 px-4 py-2 bg-white transition duration-300 ease-in-out cursor-pointer mt-12 rounded-xl shadow-shade border-none shadow-xl mx-auto border-b-2 pb-4">
-                      <p className="text-3xl font-semibold line-clamp-1">{table.title}:</p>
-                        <p className="text-lg line-clamp-3 mt-2">{table.description}</p>
-                    </div>
-                    </Link>
-                     :
-                  
-                     <Link href={`/table/${i+1}`}>
-                     <div className="hover:scale-105 w-11/12 md:w-3/5 px-4 py-2 bg-white transition duration-300 ease-in-out cursor-pointer mt-12 rounded-xl shadow-shade border-none shadow-xl mx-auto border-b-2 pb-4">
-                       <p className="text-3xl font-semibold line-clamp-1">{table.title}:</p>
-                         <p className="text-lg line-clamp-3 mt-2">{table.description}</p>
-                     </div>
-                     </Link>
-                }
-                </>
-              ))
-        }
+        </Link>
+         :
+      
+         <Link href={`/table/${i+1}`}>
+        <div className="hover:scale-105 bg-white w-fullpx-4 py-2 transition duration-300 ease-in-out cursor-pointer mt-12 mx-auto border-b-2 pb-4">
+           <p className="text-3xl font-semibold line-clamp-1">{table.title}:</p>
+             <p className="text-lg line-clamp-3 mt-2">{table.description}</p>
+         </div>
+         </Link>
+    }
+    </div>
+  ))
+}
+        </div>
+        
     </>
   )
 }
