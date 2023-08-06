@@ -3,17 +3,19 @@ export const getServerSideProps = async (req, res) => {
     console.log(req.query)
 }
 
-export default function WorldMap({table, currentMet}) {
-    
-    const [currentMetric, setCurrentMetric] = useState(currentMet);
+export default function WorldMap({table, currentMetric}) {
+
     if(table) {
         const percentThresholds = [0, 25, 50, 75];
         const thresholds = [0, 0.25, 0.5, 0.75];
         const unit = table.unit
-        const metrics = tables.metrics.split(",")
+        const metrics = table.metrics
         const data = table.data
 
         function colorCountries() {
+            console.log("Metrics: ", metrics)
+            console.log("Metric: ", currentMetric)
+            console.log("Our Data: ", data)
             if(unit == '% change in caloric production') {
                let index = metrics.indexOf(currentMetric);
                console.log("Current Index for Values is " + index);
@@ -54,6 +56,7 @@ export default function WorldMap({table, currentMet}) {
                let index = metrics.indexOf(currentMetric);
                console.log("Current Index for Values is " + index);
                data.forEach((data) => {
+                  console.log(data)
                   console.log(`Nation is ${data[0]} and Population is ${data[1]}, those harmed are ${data[index]}`);
                   let people = data[index];
                   let result = evaluate([data[1], people], "millions");
@@ -144,9 +147,10 @@ export default function WorldMap({table, currentMet}) {
          //- 75%- 5
     
         useEffect(() => {
-            console.log("Table: ", table)
+            console.log("Whats up")
             colorCountries();
-        }, [])
+        }, [currentMetric])
+        
     }
 
 
