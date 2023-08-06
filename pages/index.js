@@ -12,12 +12,12 @@ export default function Home() {
   return (
     <>
     <div className="px-12 py-4 bg-white mx-auto pt-4">
-        <a href="/">
+        <Link href="/">
             <p className="text-3xl bruh:text-5xl md:text-6xl font-semibold text-center">Nuclear Data</p>
-        </a>
+        </Link>
         <div className="text-center">
             <p className="text-2xl text-center inline">Mapping project by </p>
-            <a className="text-2xl font-bold text-blue-200 underline hover:text-blue-500 transition-all duration-300" href="https://kingcode.dev">KingCode</a>
+            <Link className="text-2xl font-bold text-blue-200 underline hover:text-blue-500 transition-all duration-300" href="https://kingcode.dev">KingCode</Link>
         </div>
     </div>
     <div className="mx-auto w-min min-w-max my-4">
@@ -48,6 +48,7 @@ export default function Home() {
             <p className="text-lg line-clamp-3 mt-2">{table.description}</p>
         </div>
         </Link>
+        
          :
       
          <Link href={`/table/${i+1}`}>

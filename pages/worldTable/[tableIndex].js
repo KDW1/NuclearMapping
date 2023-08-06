@@ -1,13 +1,13 @@
 import WorldMap from "@/components/WorldMap"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faGlobe, faHome } from "@fortawesome/free-solid-svg-icons"
+import { faGlobe, faHome, faTable } from "@fortawesome/free-solid-svg-icons"
 import Link from "next/link"
 import { fullTables } from "@/json/nuclearData"
 import { useState } from "react"
 
 export const getServerSideProps = async (context) => {
     let { tableIndex } = context.query
-    tableIndex--
+    //Range of 1-13
     //Bc javascript array index standars and blah blah....
     
     //Make sure the table is one that includes nations
@@ -20,6 +20,7 @@ export const getServerSideProps = async (context) => {
             },
         } //Invalid table index :(, redirect
     }
+    tableIndex--
     //  Get the total tables
     // let containsCountries = false;
     // updateInfo();
@@ -30,8 +31,9 @@ export const getServerSideProps = async (context) => {
         containsCountries = true;
     }
     if(containsCountries) {
-        console.log("\n\nTable:");
-        console.log(table);
+      //   console.log("\n\nTable:");
+      //   console.log(table);
+      console.log(`Table ${tableIndex}`)
         return { props: { table }}
     } else {
         console.log("No countries involved....");
@@ -66,6 +68,10 @@ export default function Page({table}) {
           
       <Link className='mx-auto w-min mt-4 min-w-max' href="/">
           <FontAwesomeIcon className='p-3 cursor-pointer hover:-rotate-12 hover:-translate-x-2 hover:-translate-y-1 transition duration-300 bg-white rounded-xl' icon={faHome}>
+          </FontAwesomeIcon>
+      </Link>
+      <Link className='mx-auto w-min mt-4 min-w-max' href={`/table/${table.numberedIndex}`}>
+          <FontAwesomeIcon className='p-3 cursor-pointer hover:-rotate-12 hover:-translate-x-2 hover:-translate-y-1 transition duration-300 bg-white rounded-xl' icon={faTable}>
           </FontAwesomeIcon>
       </Link>
           {/* <% if(locals.table) { %>
