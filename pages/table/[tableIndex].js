@@ -2,7 +2,7 @@ import WorldMap from "@/components/WorldMap"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faGlobe, faHome, faTable } from "@fortawesome/free-solid-svg-icons"
 import Link from "next/link"
-import { fullTables } from "@/json/nuclearData"
+import { fullTables } from "@/data/nuclearData"
 import { useEffect, useState } from "react"
 
 export const getServerSideProps = async (context) => {
@@ -109,7 +109,7 @@ export default function CountryTable({table, globalInfo}) {
                                     data[0] != "Total" && data[0] != "Global" ? 
                                     <>
                                     
-                                    <tr onClick={() => {data[0].trim() != '' ? location.href = `/country/${data[0]}` : ''}} id={data[0]} className={`group text-base ${data[0].trim() != '' ? "group-hover:text-lg" : ""}`}>
+                                    <tr onClick={() => {data[0].trim() != '' ? location.href = `/country/${data[0]}` : ''}} key={data[0]} className={`group text-base ${data[0].trim() != '' ? "group-hover:text-lg" : ""}`}>
                                         {/* <Link href={`/country/${data[0]}`}> */}
                                     {
                                         <>
