@@ -131,7 +131,7 @@ export default function Page({table}) {
      
                  </div>
                  <p className="text-white text-lg ml-2 font-semibold">
-                 { table.unit == '% change in caloric production' ? "more than 0%" : "less than 0%" }
+                 { table.unit != '% change in caloric production' ? "more than 0%" : "less than 0%" }
 
                  </p>
               </div>
@@ -140,7 +140,7 @@ export default function Page({table}) {
      
                  </div>
                  <p className="text-white text-lg ml-2 font-semibold">
-                 { table.unit == '% change in caloric production' ? "0% to 25%" : "0% to -25%" }
+                 { table.unit != '% change in caloric production' ? "0% to 25%" : "0% to -25%" }
                  </p>
               </div>
               <div className="flex">
@@ -148,7 +148,7 @@ export default function Page({table}) {
      
                  </div>
                  <p className="text-white text-lg ml-2 font-semibold">
-                    { table.unit == '% change in caloric production' ? "25% to 50%" : "-25% to -50%" }
+                    { table.unit != '% change in caloric production' ? "25% to 50%" : "-25% to -50%" }
                  </p>
               </div>
               <div className="flex">
@@ -156,7 +156,7 @@ export default function Page({table}) {
      
                  </div>
                  <p className="text-white text-lg ml-2 font-semibold">
-                    { table.unit == '% change in caloric production' ? "50% to 75%" : "-50% to 75%" }
+                    { table.unit != '% change in caloric production' ? "50% to 75%" : "-50% to 75%" }
                  </p>
               </div>
               <div className="flex">
@@ -164,7 +164,7 @@ export default function Page({table}) {
      
                  </div>
                  <p className="text-white text-lg ml-2 font-semibold">
-                 { table.unit == '% change in caloric production' ? "75%+" : "-75%-" }
+                 { table.unit != '% change in caloric production' ? "75%+" : "-75%-" }
                  </p>
               </div>
            </div>

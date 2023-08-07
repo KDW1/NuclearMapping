@@ -42,21 +42,21 @@ export const getServerSideProps = async (context) => {
 }
 
 export default function CountryTable({table, globalInfo}) {
-    useEffect(() => {
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
+    // useEffect(() => {
+    //     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    //         anchor.addEventListener('click', function (e) {
+    //             e.preventDefault();
     
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    }, [])
+    //             document.querySelector(this.getAttribute('href')).scrollIntoView({
+    //                 behavior: 'smooth'
+    //             });
+    //         });
+    //     });
+    // }, [])
     //Make Country Search Component
     return (
         <><div>
-        <div className="mx-auto mt-4 mb-4 space-x-2 w-min min-w-max">
+        <div className="mx-auto mt-4 mb-4 space-x-4 w-min min-w-max">
             <Link className='mx-auto w-min min-w-max' href="/">
                 <FontAwesomeIcon className='p-3 cursor-pointer hover:-rotate-12 hover:-translate-x-2 hover:-translate-y-1 transition duration-300 bg-white rounded-xl' icon={faHome}>
                 </FontAwesomeIcon>
@@ -96,7 +96,7 @@ export default function CountryTable({table, globalInfo}) {
                             }
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody className="space-y-2">
                         <tr>
                             {globalInfo ? globalInfo?.map((data) => (
                                 <td className="font-bold">{data}</td>
@@ -109,7 +109,7 @@ export default function CountryTable({table, globalInfo}) {
                                     data[0] != "Total" && data[0] != "Global" ? 
                                     <>
                                     
-                                    <tr onClick={() => {data[0].trim() != '' ? location.href = `/country/${data[0]}` : ''}} id={data[0]} className="cursor-pointer group transition duration-300">
+                                    <tr onClick={() => {data[0].trim() != '' ? location.href = `/country/${data[0]}` : ''}} id={data[0]} className={`group text-base ${data[0].trim() != '' ? "group-hover:text-lg" : ""}`}>
                                         {/* <Link href={`/country/${data[0]}`}> */}
                                     {
                                         <>
@@ -118,9 +118,9 @@ export default function CountryTable({table, globalInfo}) {
                                                 <>
                                                     {
                                                         d != '' ?
-                                                        <td className={`group-hover:py-4 transition-all duration-300 ease-in-out ${ i == 0 ? "group-hover:font-bold" : ""} %> w-min pr-2`} >{d}</td>
+                                                        <td className={`transition-all group-hover:py-4 duration-300 ease-in-out ${ i == 0 ? "cursor-pointer group-hover:font-bold" : ""} %> w-min pr-2`} >{d}</td>
                                                         :
-                                                        <td className={`group-hover:py-4 transition-all duration-300 ease-in-out font-semibold pr-2`} >Yes</td>
+                                                        <td className={`transition-all duration-300 ease-in-out font-semibold pr-2`} >Yes</td>
                                                     }
                                                 </>
                                             ))
