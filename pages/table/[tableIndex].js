@@ -2,7 +2,7 @@ import WorldMap from "@/components/WorldMap"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faGlobe, faHome, faTable } from "@fortawesome/free-solid-svg-icons"
 import Link from "next/link"
-import { fullTables } from "@/data/nuclearData"
+import { fullTables } from "@/utils/statistics"
 import { useEffect, useState } from "react"
 
 export const getServerSideProps = async (context) => {

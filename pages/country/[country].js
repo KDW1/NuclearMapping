@@ -1,5 +1,5 @@
-import { countries } from "@/data/countries";
-import { fullTables } from "@/data/nuclearData";
+import { countries } from "@/utils/statistics";
+import { fullTables } from "@/utils/statistics";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHome, faGlobe } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";

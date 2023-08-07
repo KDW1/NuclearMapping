@@ -899,7 +899,7 @@ export const simpleTables = [
     }
 ]
 
-export const detailedTables = [
+export const fullTables = [
     {
         "data": [
             [
