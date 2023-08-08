@@ -1,4 +1,905 @@
-[
+export const countries = [
+    [
+        "Albania",
+        "3.2"
+    ],
+    [
+        "Algeria",
+        "37.1"
+    ],
+    [
+        "Angola",
+        "19.5"
+    ],
+    [
+        "Antigua and Barbuda",
+        "0.1"
+    ],
+    [
+        "Argentina",
+        "40.4"
+    ],
+    [
+        "Armenia",
+        "3.0"
+    ],
+    [
+        "Australia",
+        "22.4"
+    ],
+    [
+        "Austria",
+        "8.4"
+    ],
+    [
+        "Azerbaijan",
+        "9.1"
+    ],
+    [
+        "Bahamas",
+        "0.4"
+    ],
+    [
+        "Bangladesh",
+        "151.1"
+    ],
+    [
+        "Barbados",
+        "0.3"
+    ],
+    [
+        "Belarus",
+        "9.5"
+    ],
+    [
+        "Belgium",
+        "10.9"
+    ],
+    [
+        "Belize",
+        "0.3"
+    ],
+    [
+        "Benin",
+        "9.5"
+    ],
+    [
+        "Bermuda",
+        "0.1"
+    ],
+    [
+        "Bolivia",
+        "10.2"
+    ],
+    [
+        "Bosnia and Herzegovina",
+        "3.8"
+    ],
+    [
+        "Botswana",
+        "2.0"
+    ],
+    [
+        "Brazil",
+        "195.2"
+    ],
+    [
+        "Brunei",
+        "0.4"
+    ],
+    [
+        "Bulgaria",
+        "7.4"
+    ],
+    [
+        "Burkina Faso",
+        "15.5"
+    ],
+    [
+        "Cambodia",
+        "14.4"
+    ],
+    [
+        "Cameroon",
+        "20.6"
+    ],
+    [
+        "Canada",
+        "34.1"
+    ],
+    [
+        "Cape Verde",
+        "0.5"
+    ],
+    [
+        "Central African Republic",
+        "4.4"
+    ],
+    [
+        "Chad",
+        "11.7"
+    ],
+    [
+        "Chile",
+        "17.2"
+    ],
+    [
+        "China",
+        "1367.4"
+    ],
+    [
+        "Colombia",
+        "46.4"
+    ],
+    [
+        "Republic of Congo",
+        "4.1"
+    ],
+    [
+        "Costa Rica",
+        "4.7"
+    ],
+    [
+        "Croatia",
+        "4.3"
+    ],
+    [
+        "Cuba",
+        "11.3"
+    ],
+    [
+        "Cyprus",
+        "1.1"
+    ],
+    [
+        "Czech Republic",
+        "10.6"
+    ],
+    [
+        "Denmark",
+        "5.6"
+    ],
+    [
+        "Dominica",
+        "0.1"
+    ],
+    [
+        "Dominican Republic",
+        "10.0"
+    ],
+    [
+        "Ecuador",
+        "15.0"
+    ],
+    [
+        "Egypt",
+        "78.1"
+    ],
+    [
+        "El Salvador",
+        "6.2"
+    ],
+    [
+        "Estonia",
+        "1.3"
+    ],
+    [
+        "Ethiopia",
+        "87.1"
+    ],
+    [
+        "Fiji",
+        "0.9"
+    ],
+    [
+        "Finland",
+        "5.4"
+    ],
+    [
+        "France",
+        "63.2"
+    ],
+    [
+        "French Polynesia",
+        "0.3"
+    ],
+    [
+        "Gabon",
+        "1.6"
+    ],
+    [
+        "Gambia",
+        "1.7"
+    ],
+    [
+        "Georgia",
+        "4.4"
+    ],
+    [
+        "Germany",
+        "83.0"
+    ],
+    [
+        "Ghana",
+        "24.3"
+    ],
+    [
+        "Greece",
+        "11.1"
+    ],
+    [
+        "Grenada",
+        "0.1"
+    ],
+    [
+        "Guatemala",
+        "14.3"
+    ],
+    [
+        "Guinea",
+        "10.9"
+    ],
+    [
+        "Guinea-Bissau",
+        "1.6"
+    ],
+    [
+        "Guyana",
+        "0.8"
+    ],
+    [
+        "Haiti",
+        "9.9"
+    ],
+    [
+        "Honduras",
+        "7.6"
+    ],
+    [
+        "Hungary",
+        "10.0"
+    ],
+    [
+        "Iceland",
+        "0.3"
+    ],
+    [
+        "India",
+        "1205.6"
+    ],
+    [
+        "Indonesia",
+        "240.7"
+    ],
+    [
+        "Iran",
+        "74.5"
+    ],
+    [
+        "Iraq",
+        "31.0"
+    ],
+    [
+        "Ireland",
+        "4.5"
+    ],
+    [
+        "Israel",
+        "7.4"
+    ],
+    [
+        "Italy",
+        "60.5"
+    ],
+    [
+        "Jamaica",
+        "2.7"
+    ],
+    [
+        "Japan",
+        "127.4"
+    ],
+    [
+        "Jordan",
+        "6.5"
+    ],
+    [
+        "Kazakhstan",
+        "15.9"
+    ],
+    [
+        "Kenya",
+        "40.9"
+    ],
+    [
+        "Kiribati",
+        "0.1"
+    ],
+    [
+        "Kuwait",
+        "3.0"
+    ],
+    [
+        "Kyrgyzstan",
+        "5.3"
+    ],
+    [
+        "Laos",
+        "6.4"
+    ],
+    [
+        "Latvia",
+        "2.1"
+    ],
+    [
+        "Lebanon",
+        "4.3"
+    ],
+    [
+        "Lesotho",
+        "2.0"
+    ],
+    [
+        "Liberia",
+        "4.0"
+    ],
+    [
+        "Lithuania",
+        "3.1"
+    ],
+    [
+        "Luxembourg",
+        "0.5"
+    ],
+    [
+        "Madagascar",
+        "21.1"
+    ],
+    [
+        "Malawi",
+        "15.0"
+    ],
+    [
+        "Malaysia",
+        "28.3"
+    ],
+    [
+        "Maldives",
+        "0.3"
+    ],
+    [
+        "Mali",
+        "14.0"
+    ],
+    [
+        "Malta",
+        "0.4"
+    ],
+    [
+        "Mauritania",
+        "3.6"
+    ],
+    [
+        "Mauritius",
+        "1.2"
+    ],
+    [
+        "Mexico",
+        "117.9"
+    ],
+    [
+        "Moldova",
+        "3.6"
+    ],
+    [
+        "Mongolia",
+        "2.7"
+    ],
+    [
+        "Montenegro",
+        "0.6"
+    ],
+    [
+        "Morocco",
+        "31.6"
+    ],
+    [
+        "Mozambique",
+        "24.0"
+    ],
+    [
+        "Myanmar",
+        "51.9"
+    ],
+    [
+        "Namibia",
+        "2.2"
+    ],
+    [
+        "Nepal",
+        "26.8"
+    ],
+    [
+        "Netherlands",
+        "16.6"
+    ],
+    [
+        "New Caledonia",
+        "0.2"
+    ],
+    [
+        "New Zealand",
+        "4.4"
+    ],
+    [
+        "Nicaragua",
+        "5.8"
+    ],
+    [
+        "Niger",
+        "15.9"
+    ],
+    [
+        "Nigeria",
+        "159.7"
+    ],
+    [
+        "North Korea",
+        "24.5"
+    ],
+    [
+        "Norway",
+        "4.9"
+    ],
+    [
+        "Oman",
+        "2.8"
+    ],
+    [
+        "Pakistan",
+        "173.1"
+    ],
+    [
+        "Panama",
+        "3.7"
+    ],
+    [
+        "Paraguay",
+        "6.5"
+    ],
+    [
+        "Peru",
+        "29.3"
+    ],
+    [
+        "Philippines",
+        "93.4"
+    ],
+    [
+        "Poland",
+        "38.2"
+    ],
+    [
+        "Portugal",
+        "10.6"
+    ],
+    [
+        "Romania",
+        "21.9"
+    ],
+    [
+        "Russia",
+        "143.6"
+    ],
+    [
+        "Rwanda",
+        "10.8"
+    ],
+    [
+        "Saint Kitts and Nevis",
+        "0.1"
+    ],
+    [
+        "Saint Lucia",
+        "0.2"
+    ],
+    [
+        "Saint Vincent and the Grenadines",
+        "0.1"
+    ],
+    [
+        "Samoa",
+        "0.2"
+    ],
+    [
+        "Sao Tome and Principe",
+        "0.2"
+    ],
+    [
+        "Saudi Arabia",
+        "27.3"
+    ],
+    [
+        "Senegal",
+        "13.0"
+    ],
+    [
+        "Serbia",
+        "9.6"
+    ],
+    [
+        "Sierra Leone",
+        "5.8"
+    ],
+    [
+        "Slovakia",
+        "5.4"
+    ],
+    [
+        "Slovenia",
+        "2.1"
+    ],
+    [
+        "Solomon Islands",
+        "0.5"
+    ],
+    [
+        "South Africa",
+        "51.5"
+    ],
+    [
+        "South Korea",
+        "48.5"
+    ],
+    [
+        "Spain",
+        "46.2"
+    ],
+    [
+        "Sri Lanka",
+        "20.8"
+    ],
+    [
+        "Sudan",
+        "Not provided"
+    ],
+    [
+        "Suriname",
+        "0.5"
+    ],
+    [
+        "Sweden",
+        "9.4"
+    ],
+    [
+        "Switzerland",
+        "7.8"
+    ],
+    [
+        "Taiwan, province of China",
+        "23.1"
+    ],
+    [
+        "Tajikistan",
+        "7.6"
+    ],
+    [
+        "Tanzania",
+        "45.0"
+    ],
+    [
+        "Thailand",
+        "66.4"
+    ],
+    [
+        "Togo",
+        "6.3"
+    ],
+    [
+        "Trinidad and Tobago",
+        "1.3"
+    ],
+    [
+        "Tunisia",
+        "10.6"
+    ],
+    [
+        "Turkey",
+        "72.1"
+    ],
+    [
+        "Turkmenistan",
+        "5.0"
+    ],
+    [
+        "Uganda",
+        "34.0"
+    ],
+    [
+        "Ukraine",
+        "46.1"
+    ],
+    [
+        "United Arab Emirates",
+        "8.4"
+    ],
+    [
+        "United Kingdom",
+        "62.3"
+    ],
+    [
+        "United States",
+        "312.2"
+    ],
+    [
+        "Uruguay",
+        "3.4"
+    ],
+    [
+        "Uzbekistan",
+        "27.8"
+    ],
+    [
+        "Vanuatu",
+        "0.2"
+    ],
+    [
+        "Venezuela",
+        "29.0"
+    ],
+    [
+        "Vietnam",
+        "89.0"
+    ],
+    [
+        "Yemen",
+        "22.8"
+    ],
+    [
+        "Zambia",
+        "13.2"
+    ],
+    [
+        "Zimbabwe",
+        "13.1"
+    ],
+    [
+        "Total",
+        "6703.0"
+    ]
+]
+
+export const simpleTables = [
+    {
+        "data": [],
+        "description": "Number of weapons on urban targets, yields, direct fatalities from the bomb blasts, and resulting number of people in danger of death due to famine for the different scenarios we studied.  The 5 Tg case scenario is from reference 16 for an India-Pakistan war taking place in 2008; the 16-47 Tg cases are from reference 18 for an India-Pakistan war taking place in 2025; and the 150 Tg case is from reference 52, which assumes attacks on France, Germany, Japan, U.K., U.S., Russia, and China.  The last column is the number of people who would starve by the end of Year 2 when the rest of the population is provided with the minimum amount of food needed to survive, assumed to be a calorie intake of 1911 kcal/capita/day, and for no international trade, from Supplemental Information, Table S5, the Partial Livestock case, in which 50% of livestock grain feed used for human consumption, and 50% of livestock grain feed used to raise livestock, using the latest complete data available, for the year 2010.  For 2010, the world population was 6,703,000,000.  There are many other scenarios in which these amounts of soot could be produced by a nuclear war, and the scenarios we use are only meant to be illustrative examples.  The last column is the case with the fewest number of deaths, and other cases are available in the Supplementary Information.",
+        "metrics": [
+            "Soot",
+            "Number of weapons",
+            "Yield",
+            "Number of direct fatalities",
+            "Number of people without food at the end of Year 2"
+        ],
+        "title": "Statistics",
+        "unit": "",
+        "numberedIndex": 1
+    },
+    {
+        "data": [],
+        "description": "Changes in food calorie availability (%) in Year 2 after a nuclear war for the nations with nuclear weapons and global average assuming no trade after simulated nuclear wars under the Livestock Case, the Partial Livestock Case, and the No Livestock Case with 50% livestock feed to human consumption.  The total calorie reduction is referenced to the observed food calorie availability in 2010.  China here includes Mainland China, Hong Kong, and Macao. 150 Tg + hw is half of the household waste added to food consumption, and 150 Tg + tw is total household waste added to food consumption.  Bold is used for headings and global averages.",
+        "metrics": [
+            "Nations",
+            "5 Tg",
+            "16 Tg",
+            "27 Tg",
+            "37 Tg",
+            "47 Tg",
+            "150 Tg",
+            "150 Tg + hw",
+            "150 Tg + tw"
+        ],
+        "title": "Livestock Case",
+        "unit": "% change in caloric production",
+        "numberedIndex": 2
+    },
+    {
+        "data": [],
+        "description": "Changes in food calorie availability (%) in Year 2 after a nuclear war for the nations with nuclear weapons and global average assuming no trade after simulated nuclear wars under the Livestock Case, the Partial Livestock Case, and the No Livestock Case with 50% livestock feed to human consumption.  The total calorie reduction is referenced to the observed food calorie availability in 2010.  China here includes Mainland China, Hong Kong, and Macao. 150 Tg + hw is half of the household waste added to food consumption, and 150 Tg + tw is total household waste added to food consumption.  Bold is used for headings and global averages.",
+        "metrics": [
+            "Nations",
+            "5 Tg",
+            "16 Tg",
+            "27 Tg",
+            "37 Tg",
+            "47 Tg",
+            "150 Tg",
+            "150 Tg + hw",
+            "150 Tg + tw"
+        ],
+        "title": "Partial Livestock Case (50% livestock feed to human consumption, 50% livestock feed to livestock)",
+        "unit": "% change in caloric production",
+        "numberedIndex": 3
+    },
+    {
+        "data": [],
+        "description": "Changes in food calorie availability (%) in Year 2 after a nuclear war for the nations with nuclear weapons and global average assuming no trade after simulated nuclear wars under the Livestock Case, the Partial Livestock Case, and the No Livestock Case with 50% livestock feed to human consumption.  The total calorie reduction is referenced to the observed food calorie availability in 2010.  China here includes Mainland China, Hong Kong, and Macao. 150 Tg + hw is half of the household waste added to food consumption, and 150 Tg + tw is total household waste added to food consumption.  Bold is used for headings and global averages.",
+        "metrics": [
+            "Nations",
+            "5 Tg",
+            "16 Tg",
+            "27 Tg",
+            "37 Tg",
+            "47 Tg",
+            "150 Tg",
+            "150 Tg + hw",
+            "150 Tg + tw"
+        ],
+        "title": "No Livestock Case (50% livestock feed to human consumption)",
+        "unit": "% change in caloric production",
+        "numberedIndex": 4
+    },
+    {
+        "data": [],
+        "description": "Changes in caloric production (%) from the major food crops (maize, rice, soybean and spring wheat) and marine fish in Year 2 after simulated nuclear conflicts for the nations with nuclear weapons and the global average for all nations calculated.  China here includes Mainland China, Hong Kong, and Macao.",
+        "metrics": [
+            "Nations",
+            "5 Tg",
+            "16 Tg",
+            "27 Tg",
+            "37 Tg",
+            "47 Tg",
+            "150 Tg"
+        ],
+        "title": "Calorie reduction from the major food crops and marine fish in nations with nuclear weapons.",
+        "unit": "% change in caloric production",
+        "numberedIndex": 5
+    },
+    {
+        "data": [],
+        "description": "Changes in caloric production (%) from the major food crops (maize, rice, soybean and spring wheat) and marine fish in Year 2 after simulated nuclear conflicts for all nations calculated.  China here includes Mainland China, Hong Kong, and Macao.",
+        "metrics": [
+            "Nation",
+            "5 Tg",
+            "16 Tg",
+            "27 Tg",
+            "37 Tg",
+            "47 Tg",
+            "150 Tg"
+        ],
+        "title": "Calorie reduction from the major food crops and marine fish in all nations calculated.",
+        "unit": "% change in caloric production",
+        "numberedIndex": 6
+    },
+    {
+        "data": [],
+        "description": "Assumptions for the Livestock, Partial Livestock, and No Livestock cases.  Livestock includes meat, dairy, eggs, and aquaculture.  Inland fish capture, a minor source of food, is not considered in any of the cases",
+        "metrics": [
+            "Assumptions",
+            "Livestock",
+            "Partial Livestock",
+            "No Livestock"
+        ],
+        "title": "Assumptions for the Livestock, Partial Livestock, and No Livestock cases.",
+        "unit": "",
+        "numberedIndex": 7
+    },
+    {
+        "data": [],
+        "description": "Number of people who would die from starvation (millions) after the simulated nuclear war in Year 2 for all nations assuming no trade under the Livestock case (livestock production is continued).  The second column is the population in millions in 201045.  150 Tg + hw is half of the household waste added to food consumption, and 150 Tg + tw is total household waste added to food consumption.",
+        "metrics": [
+            "Nation",
+            "Population",
+            "5 Tg",
+            "16 Tg",
+            "27 Tg",
+            "37 Tg",
+            "47 Tg",
+            "150 Tg",
+            "150 Tg +hw",
+            "150 Tg + tw"
+        ],
+        "title": "Number of people who would die from starvation after the simulated nuclear war in Year 2 for all nations for the Livestock case with trade off.",
+        "unit": "million people",
+        "numberedIndex": 8
+    },
+    {
+        "data": [],
+        "description": "Number of people who would die from starvation (millions) after the simulated nuclear war in Year 2 for all nations, assuming no trade, under the Partial Livestock case (assuming 50% of livestock grain feed is used for human consumption, and 50% of livestock grain feed is used to raise livestock).  The second column is the population in millions in 201045.  150 Tg + hw is half of the household waste added to food consumption, and 150 Tg + tw is total household waste added to food consumption.",
+        "metrics": [
+            "Nation",
+            "Population",
+            "5 Tg",
+            "16 Tg",
+            "27 Tg",
+            "37 Tg",
+            "47 Tg",
+            "150 Tg",
+            "150 Tg + hw",
+            "150 Tg + tw"
+        ],
+        "title": "Number of people who would die from starvation after the simulated nuclear war in Year 2 for all nations for the Partial Livestock case with trade off.",
+        "unit": "million people",
+        "numberedIndex": 9
+    },
+    {
+        "data": [],
+        "description": "Number of people who would die from starvation (millions) after the simulated nuclear war in Year 2 for all nations, assuming no trade, under the No Livestock case (assuming livestock is killed in Year 1 and 50% of livestock grain feed is used for human consumption).  The second column is the population in millions in 201042. 150 Tg + hw is half of the household waste added to food consumption, and 150 Tg + tw is total household waste added to food consumption.",
+        "metrics": [
+            "Nation",
+            "Population",
+            "5 Tg",
+            "16 Tg",
+            "27 Tg",
+            "37 Tg",
+            "47 Tg",
+            "150 Tg",
+            "150 Tg + hw",
+            "150 Tg + tw"
+        ],
+        "title": "Number of people who would die from starvation after the simulated nuclear war in Year 2 for all nations for the No Livestock case with trade off.",
+        "unit": "million people",
+        "numberedIndex": 10
+    },
+    {
+        "data": [],
+        "description": "Number of people who would die from starvation (millions) after the simulated nuclear war in Year 2 for all nations assuming that trade would continue under the Livestock case (livestock production is continued).  The second column is the population in millions in 201045.  150 Tg + hw is half of the household waste added to food consumption, and 150 Tg + tw is total household waste added to food consumption.",
+        "metrics": [
+            "Nation",
+            "Population",
+            "5 Tg",
+            "16 Tg",
+            "27 Tg",
+            "37 Tg",
+            "47 Tg",
+            "150 Tg",
+            "150 Tg +hw",
+            "150 Tg + tw"
+        ],
+        "title": "Number of people who would die from starvation after the simulated nuclear war in Year 2 for all nations for the Livestock case with trade on.",
+        "unit": "million people",
+        "numberedIndex": 11
+    },
+    {
+        "data": [],
+        "description": "Number of people who would die from starvation (millions) after the simulated nuclear war in Year 2 for all nations, assuming that trade would continue, under the Partial Livestock case (assuming 50% of livestock grain feed is used for human consumption, and 50% of livestock grain feed is used to raise livestock).  The second column is the population in millions in 201045.  150 Tg + hw is half of the household waste added to food consumption, and 150 Tg + tw is total household waste added to food consumption.",
+        "metrics": [
+            "Nation",
+            "Population",
+            "5 Tg",
+            "16 Tg",
+            "27 Tg",
+            "37 Tg",
+            "47 Tg",
+            "150 Tg",
+            "150 Tg + hw",
+            "150 Tg + tw"
+        ],
+        "title": "Number of people who would die from starvation after the simulated nuclear war in Year 2 for all nations for the Partial Livestock case with trade on.",
+        "unit": "million people",
+        "numberedIndex": 12
+    },
+    {
+        "data": [],
+        "description": "Number of people who would die from starvation (millions) after the simulated nuclear war in Year 2 for all nations, assuming that trade would continue, under the No Livestock case (assuming livestock is killed in Year 1 and 50% of livestock grain feed is used for human consumption).  The second column is the population in millions in 201042. 150 Tg + hw is half of the household waste added to food consumption, and 150 Tg + tw is total household waste added to food consumption.",
+        "metrics": [
+            "Nation",
+            "Population",
+            "5 Tg",
+            "16 Tg",
+            "27 Tg",
+            "37 Tg",
+            "47 Tg",
+            "150 Tg",
+            "150 Tg + hw",
+            "150 Tg + tw"
+        ],
+        "title": "Number of people who would die from starvation after the simulated nuclear war in Year 2 for all nations for the No Livestock case with trade on.",
+        "unit": "million people",
+        "numberedIndex": 13
+    }
+]
+
+export const fullTables = [
     {
         "data": [
             [
@@ -52,9 +953,9 @@
             "Number of direct fatalities",
             "Number of people without food at the end of Year 2"
         ],
-        "numberedIndex": 1,
         "title": "Statistics",
-        "unit": ""
+        "unit": "",
+        "numberedIndex": 1
     },
     {
         "data": [
@@ -170,9 +1071,9 @@
             "150 Tg + hw",
             "150 Tg + tw"
         ],
-        "numberedIndex": 2,
         "title": "Livestock Case",
-        "unit": "% change in caloric production"
+        "unit": "% change in caloric production",
+        "numberedIndex": 2
     },
     {
         "data": [
@@ -288,9 +1189,9 @@
             "150 Tg + hw",
             "150 Tg + tw"
         ],
-        "numberedIndex": 3,
         "title": "Partial Livestock Case (50% livestock feed to human consumption, 50% livestock feed to livestock)",
-        "unit": "% change in caloric production"
+        "unit": "% change in caloric production",
+        "numberedIndex": 3
     },
     {
         "data": [
@@ -406,9 +1307,9 @@
             "150 Tg + hw",
             "150 Tg + tw"
         ],
-        "numberedIndex": 4,
         "title": "No Livestock Case (50% livestock feed to human consumption)",
-        "unit": "% change in caloric production"
+        "unit": "% change in caloric production",
+        "numberedIndex": 4
     },
     {
         "data": [
@@ -504,9 +1405,9 @@
             "47 Tg",
             "150 Tg"
         ],
-        "numberedIndex": 5,
         "title": "Calorie reduction from the major food crops and marine fish in nations with nuclear weapons.",
-        "unit": "% change in caloric production"
+        "unit": "% change in caloric production",
+        "numberedIndex": 5
     },
     {
         "data": [
@@ -2024,9 +2925,9 @@
             "47 Tg",
             "150 Tg"
         ],
-        "numberedIndex": 6,
         "title": "Calorie reduction from the major food crops and marine fish in all nations calculated.",
-        "unit": "% change in caloric production"
+        "unit": "% change in caloric production",
+        "numberedIndex": 6
     },
     {
         "data": [
@@ -2074,9 +2975,9 @@
             "Partial Livestock",
             "No Livestock"
         ],
-        "numberedIndex": 7,
         "title": "Assumptions for the Livestock, Partial Livestock, and No Livestock cases.",
-        "unit": ""
+        "unit": "",
+        "numberedIndex": 7
     },
     {
         "data": [
@@ -4086,9 +4987,9 @@
             "150 Tg +hw",
             "150 Tg + tw"
         ],
-        "numberedIndex": 8,
         "title": "Number of people who would die from starvation after the simulated nuclear war in Year 2 for all nations for the Livestock case with trade off.",
-        "unit": "million people"
+        "unit": "million people",
+        "numberedIndex": 8
     },
     {
         "data": [
@@ -6098,9 +6999,9 @@
             "150 Tg + hw",
             "150 Tg + tw"
         ],
-        "numberedIndex": 9,
         "title": "Number of people who would die from starvation after the simulated nuclear war in Year 2 for all nations for the Partial Livestock case with trade off.",
-        "unit": "million people"
+        "unit": "million people",
+        "numberedIndex": 9
     },
     {
         "data": [
@@ -8110,9 +9011,9 @@
             "150 Tg + hw",
             "150 Tg + tw"
         ],
-        "numberedIndex": 10,
         "title": "Number of people who would die from starvation after the simulated nuclear war in Year 2 for all nations for the No Livestock case with trade off.",
-        "unit": "million people"
+        "unit": "million people",
+        "numberedIndex": 10
     },
     {
         "data": [
@@ -10122,9 +11023,9 @@
             "150 Tg +hw",
             "150 Tg + tw"
         ],
-        "numberedIndex": 11,
         "title": "Number of people who would die from starvation after the simulated nuclear war in Year 2 for all nations for the Livestock case with trade on.",
-        "unit": "million people"
+        "unit": "million people",
+        "numberedIndex": 11
     },
     {
         "data": [
@@ -12134,9 +13035,9 @@
             "150 Tg + hw",
             "150 Tg + tw"
         ],
-        "numberedIndex": 12,
         "title": "Number of people who would die from starvation after the simulated nuclear war in Year 2 for all nations for the Partial Livestock case with trade on.",
-        "unit": "million people"
+        "unit": "million people",
+        "numberedIndex": 12
     },
     {
         "data": [
@@ -14146,8 +15047,8 @@
             "150 Tg + hw",
             "150 Tg + tw"
         ],
-        "numberedIndex": 13,
         "title": "Number of people who would die from starvation after the simulated nuclear war in Year 2 for all nations for the No Livestock case with trade on.",
-        "unit": "million people"
+        "unit": "million people",
+        "numberedIndex": 13
     }
 ]

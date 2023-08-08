@@ -3,7 +3,9 @@ const colors = require('tailwindcss/colors');
 
 module.exports = {
   content: [
-    './**/*.ejs'
+    './pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './components/**/*.{js,ts,jsx,tsx,mdx}',
+    './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
     screens: {
@@ -25,7 +27,6 @@ module.exports = {
       '2xl': '1536px'
       // => @media (min-width: 1536px) { ... }
     },
-    display: ['group-hover'],
     extend: {
       colors: {
         main: colors.rose[700],
@@ -33,7 +34,5 @@ module.exports = {
       },
     },
   },
-  plugins: [
-    require('@tailwindcss/line-clamp'),
-  ],
+  plugins: [],
 }
