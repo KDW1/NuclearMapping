@@ -81,7 +81,7 @@ export default function CountryTable({table, globalInfo}) {
             }
             {
                 table.containsCountries ? 
-                <p className="mt-2 text-xs sm:text-base text-center"><strong>*</strong>You can click on a country's name to see all tables under it</p>
+                <p className="mt-2 text-xs sm:text-base text-center"><strong>*</strong>You can click on a {"country's"} name to see all tables under it</p>
                 : <></>
             }
             <p className="block overflow-x:hidden text-center text-sm md:text-base mt-4 font-semibold w-3/4 mx-auto relative"><strong>*</strong> You can scroll to see the rest of the table...</p>
@@ -90,16 +90,16 @@ export default function CountryTable({table, globalInfo}) {
                     <thead>
                         <tr>
                             {
-                                table.metrics.map((data) => (
-                                    <th className="text-start pr-10 text-xs sm:text-sm font-semibold">{data}</th>
+                                table.metrics.map((data, i) => (
+                                    <th key={i} className="text-start pr-10 text-xs sm:text-sm font-semibold">{data}</th>
                                 ))
                             }
                         </tr>
                     </thead>
                     <tbody className="space-y-2">
                         <tr>
-                            {globalInfo ? globalInfo?.map((data) => (
-                                <td className="font-bold">{data}</td>
+                            {globalInfo ? globalInfo?.map((data, i) => (
+                                <td key={i} className="font-bold">{data}</td>
                             )) : <></>}
                         </tr>
                         {/* data[0] is the country name */}

@@ -145,13 +145,14 @@ export default function WorldMap({table, currentMetric}) {
          //- 25%-50% 3
          //- 50%-75% 4
          //- 75%- 5
-    
-        useEffect(() => {
-            console.log("Whats up")
-            colorCountries();
-        }, [currentMetric])
-        
     }
+
+    useEffect(() => {
+      console.log("Whats up")
+      if(table) {
+         colorCountries();
+      }
+  }, [currentMetric])
 
 
 
