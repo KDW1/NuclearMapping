@@ -4,7 +4,8 @@ export const getServerSideProps = async (req, res) => {
 }
 
 export default function WorldMap({table, currentMetric}) {
-
+   let colorCountries
+   let evaluate
     if(table) {
         const percentThresholds = [0, 25, 50, 75];
         const thresholds = [0, 0.25, 0.5, 0.75];
@@ -12,7 +13,7 @@ export default function WorldMap({table, currentMetric}) {
         const metrics = table.metrics
         const data = table.data
 
-        function colorCountries() {
+        colorCountries = () => {
             console.log("Metrics: ", metrics)
             console.log("Metric: ", currentMetric)
             console.log("Our Data: ", data)
@@ -92,7 +93,7 @@ export default function WorldMap({table, currentMetric}) {
             }
          }
     
-         function evaluate(data, mode) {
+         evaluate = (data, mode) => {
             if(mode == "percent") {
                let val = data;
                for(let i = 0; i < percentThresholds.length+1; i++) {

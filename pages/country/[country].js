@@ -5,6 +5,7 @@ import { faHome, faGlobe } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
 import Head from "next/head";
 import { useEffect } from "react";
+import SearchBar from "@/components/SearchBar";
 import {
     Chart as ChartJS,
     CategoryScale,
@@ -178,12 +179,7 @@ export default function Page({population, country, tables}) {
             </Link>
        </div>
         <p className="block sm:hidden text-center text-lg mt-4 font-semibold w-3/4 mx-auto relative text-white"><strong>*</strong> Best quality can be seen on bigger screens....</p>
-        <div className="px-12 py-4 mb-4 shadow-xl shadow-shade relative bg-white w-min min-w-max mx-auto rounded-md mt-4 hover:-translate-y-2 ease-in-out transition duration-300">
-            <form className="mx-auto w-min" action="/country" method="post">
-                <label className="text-center block font-medium text-xl w-max align-baseline" for="">Search by Country:</label>
-                <input className="mt-2 mx-auto border px-2 py-2 rounded align-baseline w-full" name="country" type="text"/>
-            </form>
-        </div>
+        <SearchBar />
         { tables ? 
         <>
         <div className="mb-4 shadow-xl shadow-shade relative mx-auto px-8 py-4 w-5/6 sm:w-1/2 bg-white rounded-xl">

@@ -4,6 +4,7 @@ import { faGlobe, faHome, faTable } from "@fortawesome/free-solid-svg-icons"
 import Link from "next/link"
 import { fullTables } from "@/utils/statistics"
 import { useState } from "react"
+import SearchBar from "@/components/SearchBar"
 
 export const getServerSideProps = async (context) => {
     let { tableIndex } = context.query
@@ -83,12 +84,7 @@ export default function Page({table}) {
              </a>
           <% } %>  */}
        </div>
-       <div className="px-8 py-4 mb-6 shadow-xl shadow-shade relative bg-white w-min min-w-max mx-auto rounded-md mt-4  hover:-translate-y-2 ease-in-out transition duration-300">
-           <form className="mx-auto w-min" action="/country" method="post">
-               <label className="text-center block font-medium text-lg align-baseline" for="">Search by Country:</label>
-               <input className="mt-2 mx-auto px-2 py-1 rounded align-baseline border-2" name="country" type="text"/>
-           </form>
-       </div>
+       <SearchBar />
        {
         table ? <>
         <p className="mx-auto text-center mb-2 w-1/3 text-xl md:text-2xl lg:text-3xl text-white font-bold border-b-4 border-white">

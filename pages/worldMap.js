@@ -2,6 +2,7 @@ import WorldMap from "@/components/WorldMap"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faGlobe, faHome } from "@fortawesome/free-solid-svg-icons"
 import Link from "next/link"
+import SearchBar from "@/components/SearchBar"
 
 export default function Page() {
     return (
@@ -24,12 +25,7 @@ export default function Page() {
              </a>
           <% } %>  */}
        </div>
-       <div className="px-8 py-4 mb-6 shadow-xl shadow-shade relative bg-white w-min min-w-max mx-auto rounded-md mt-4  hover:-translate-y-2 ease-in-out transition duration-300">
-           <form className="mx-auto w-min" action="/country" method="post">
-               <label className="text-center block font-medium text-lg align-baseline" for="">Search by Country:</label>
-               <input className="mt-2 mx-auto px-2 py-1 rounded align-baseline border-2" name="country" type="text"/>
-           </form>
-       </div>
+       <SearchBar />
        <WorldMap table={null} />
         <style>
             {`
