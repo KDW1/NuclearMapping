@@ -56,8 +56,8 @@ function tablesOf(country) {
         let tab = fullTables[i]
         // console.log(tab.description)
         let result = {
-            metrics: tab.metrics,
-            title: tab.title,
+            metrics: JSON.parse(JSON.stringify(tab.metrics)),
+            title: JSON.parse(JSON.stringify(tab.title)),
             table: [],
             unit: tab.unit,
             numberedIndex: tab.numberedIndex,
