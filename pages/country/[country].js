@@ -66,7 +66,12 @@ function tablesOf(country) {
         };
         for(let j = 0; j < tab.data.length; j++) {
             let dat = tab.data[j]
-            let mutable = [...dat]; //Make copy of array and not a reference bc referencing caused many issues for the following splice
+            let mutable = []; 
+            for(let i = 0; i < dat.length; i++) {
+                let instance = dat[i]
+                mutable.push(instance)
+            }
+            //Make copy of array and not a reference bc referencing caused many issues for the following splice
             // console.log("Mutable: ", mutable)
             if(mutable[0].toLowerCase() == country.toLowerCase()) { //Matching nation
                 // console.log("Matches: ", mutable)
