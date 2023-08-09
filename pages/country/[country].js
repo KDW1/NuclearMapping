@@ -66,13 +66,7 @@ function tablesOf(country) {
         };
         for(let j = 0; j < tab.data.length; j++) {
             let dat = tab.data[j]
-            let mutable = []; 
-            for(let i = 0; i < dat.length; i++) {
-                let instance = dat[i]
-                mutable.push(instance)
-            }
-            //Make copy of array and not a reference bc referencing caused many issues for the following splice
-            // console.log("Mutable: ", mutable)
+            let mutable = JSON.parse(JSON.stringify(dat)) //Really have to avoid shallow copies as these are nested
             if(mutable[0].toLowerCase() == country.toLowerCase()) { //Matching nation
                 // console.log("Matches: ", mutable)
                 if(result.metrics[0] == 'Nation' || result.metrics[0] == 'Nations') {
