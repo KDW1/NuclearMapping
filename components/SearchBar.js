@@ -31,7 +31,7 @@ export default function SearchBar() {
             country,
             elem: [
               country.slice(0, index),
-              <span className="text-main font-semibold">
+              <span key={country} className="text-main font-semibold">
                 {country.slice(index, index + query.length)}
               </span>,
               country.slice(index + query.length, country.length),
@@ -88,14 +88,14 @@ export default function SearchBar() {
         />
       </form>
       <div className="flex flex-col mt-2 space-y-2">
-        {matchesQuery.map((matching) => (
-          <button
+        {matchesQuery.map((matching, i) => (
+          <button key={`button${matching.country}`}
             onClick={() => {
               setQuery("");
               router.push(`/country/${matching.country}`);
             }}
           >
-            <div key={matching.country} className="hover:bg-gray-100 rounded px-2 py-1 bg-white duration-300 transition">
+            <div className="hover:bg-gray-100 rounded px-2 py-1 bg-white duration-300 transition">
               {matching.elem}
             </div>
           </button>
