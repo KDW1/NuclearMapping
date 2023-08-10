@@ -95,7 +95,7 @@ export default function SearchBar() {
               router.push(`/country/${matching.country}`);
             }}
           >
-            <div className="hover:bg-gray-100 rounded px-2 py-1 bg-white duration-300 transition">
+            <div key={matching.country} className="hover:bg-gray-100 rounded px-2 py-1 bg-white duration-300 transition">
               {matching.elem}
             </div>
           </button>
