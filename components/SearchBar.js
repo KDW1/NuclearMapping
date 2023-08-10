@@ -53,7 +53,7 @@ export default function SearchBar() {
       passingArr.push("...")
     }
     passingArr= [...matching.slice(0, cutoff), ...passingArr]
-    setMatchesQuery(matching);
+    setMatchesQuery(passingArr);
   }, [query]);
 
   return (
