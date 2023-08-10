@@ -26,10 +26,6 @@ export default function SearchBar() {
       for (let i = 0; i < countries.length; i++) {
         let country = countries[i][0];
         // console.log(country)
-        if (matching.length >= cutoff) {
-          matching.push("...");
-          break;
-        }
         let index = country.toLowerCase().indexOf(query.toLowerCase());
         if (index != -1) {
           let passingElement = {
@@ -41,6 +37,7 @@ export default function SearchBar() {
               </span>,
               country.slice(index + query.length, country.length),
             ],
+            index
           };
           matching.push(passingElement);
           console.log(passingElement);
@@ -48,6 +45,14 @@ export default function SearchBar() {
         }
       }
     }
+
+    //Sort by where the found query actually is
+    matching.sort((a, b) => a.index - b.index)
+    let passingArr = []
+    if(matching.length >= cutoff) {
+      passingArr.push("...")
+    }
+    passingArr= [...matching.slice(0, cutoff), ...passingArr]
     setMatchesQuery(matching);
   }, [query]);
 
