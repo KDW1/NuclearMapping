@@ -127,7 +127,7 @@ export default function Page({table}) {
      
                  </div>
                  <p className="text-white text-lg ml-2 font-semibold">
-                 { table.unit != '% change in caloric production' ? "more than 0%" : "less than 0%" }
+                 { table.unit != '% change in caloric production' ? "near 0%" : "0%+" }
 
                  </p>
               </div>
