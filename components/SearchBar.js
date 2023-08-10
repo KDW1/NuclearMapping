@@ -55,13 +55,13 @@ export default function SearchBar() {
     <div className="px-12 mb-2 py-4 shadow-xl shadow-shade relative bg-white w-11/12 md:w-2/3 lg:w-1/3 mx-auto rounded-md mt-4  hover:-translate-y-2 ease-in-out transition duration-300">
       <form
         className="mx-auto w-min"
-        onSubmit={(e) => {
+        onSubmit={async (e) => {
           setLoading(true);
           e.preventDefault();
           console.log("Country: ", query);
           setQuery("");
-          setTimeout(() => {
-            router.push(
+          setTimeout(async () => {
+            await router.push(
               `/country/${
                 matchesQuery.length == 1 ? matchesQuery[0].country : query
               }`
@@ -101,12 +101,11 @@ export default function SearchBar() {
           <button
             className={`${i != cutoff ? "mt-2" : ""}`}
             key={`button${matching.country ?? "Default"}`}
-            onClick={() => {
+            onClick={async () => {
               setQuery("");
               setLoading(true);
-              setTimeout(() => {
-                if (matching.country)
-                  router.push(`/country/${matching.country}`);
+              setTimeout(async () => {
+                if (matching.country) await router.push(`/country/${matching.country}`);
                 setLoading(false);
               }, WAIT_TIME); //Make it seem like its loading
             }}
