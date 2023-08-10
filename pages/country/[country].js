@@ -147,21 +147,23 @@ export default function Page({population, country, tables}) {
     const tableData = []
     // useEffect(() => {
     //     console.log("Tables: ", tables)
-        for(let i = 0; i < tables.length; i++) {
-            let table = tables[i]
-            let obj = {
-                labels: table.metrics,
-                datasets: [{
-                        label: table.unit,
-                        data: table.table,
-                        borderWidth: 1,
-                        borderColor: "#f55142",
-                        backgroundColor: "#f5f242",
-                        color: "#73342e"
-                }]
+        if(tables) {
+            for(let i = 0; i < tables.length; i++) {
+                let table = tables[i]
+                let obj = {
+                    labels: table.metrics,
+                    datasets: [{
+                            label: table.unit,
+                            data: table.table,
+                            borderWidth: 1,
+                            borderColor: "#f55142",
+                            backgroundColor: "#f5f242",
+                            color: "#73342e"
+                    }]
+                }
+                console.log(`Table${i}`, obj)
+                tableData.push(obj)
             }
-            console.log(`Table${i}`, obj)
-            tableData.push(obj)
         }
     // }, [])
 
