@@ -20,7 +20,7 @@ export default function Home() {
             <p className="text-2xl text-center inline">Mapping project by </p>
             <Link className="text-2xl font-bold text-red-200 underline hover:text-red-500 transition-all duration-300" href="https://kingcode.dev">KingCode</Link>
             <p className="text-2xl">Check out the study <Link className='font-bold text-red-200 underline hover:text-red-500 transition-all duration-300' href={"https://www.nature.com/articles/s43016-022-00573-0"}>here</Link></p>
-            <p className="text-sm sm:text-base w-full md:w-1/4 mx-auto text-red-300">We used the information listed under the {"Supplementary Information"} page</p>
+            <p className="text-sm sm:text-base w-full md:w-1/3 lg:w-1/4 mx-auto text-red-300">We used the information listed under the {"Supplementary Information"} page</p>
         </div>
     </div>
     <div className="mx-auto w-min min-w-max my-4">
