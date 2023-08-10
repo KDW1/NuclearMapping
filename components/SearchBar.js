@@ -10,7 +10,7 @@ export default function SearchBar() {
   const [query, setQuery] = useState("");
   const [loading, setLoading] = useState(false);
   const [matchesQuery, setMatchesQuery] = useState([]);
-  const [cutoff, setCutoff] = useState(10);
+  const [cutoff, setCutoff] = useState(8);
   const router = useRouter();
 
   useEffect(() => {
@@ -22,6 +22,7 @@ export default function SearchBar() {
         let country = countries[i][0];
         // console.log(country)
         if (matching.length >= cutoff) {
+        
           matching.push("...");
           break;
         }
@@ -87,16 +88,16 @@ export default function SearchBar() {
           type="text"
         />
       </form>
-      <div className="flex flex-col mt-2 space-y-2">
+      <div className="flex flex-col space-y-2">
         {matchesQuery.map((matching, i) => (
-          <button key={`button${matching.country}`}
+          <button className={`${i != cutoff ? "mt-2" : ""}`} key={`button${matching.country ?? "Default"}`}
             onClick={() => {
               setQuery("");
-              router.push(`/country/${matching.country}`);
+              if(matching.country) router.push(`/country/${matching.country}`);
             }}
           >
             <div className="hover:bg-gray-100 rounded px-2 py-1 bg-white duration-300 transition">
-              {matching.elem}
+              {matching.elem ?? matching}
             </div>
           </button>
         ))}
