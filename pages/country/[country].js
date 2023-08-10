@@ -206,7 +206,7 @@ export default function Page({population, country, tables}) {
         ))}
         </>
         :
-            <p className="text-center text-3xl mt-4 font-bold relative text-white">Sorry, the country "{country}" {"isn't"} listed...</p>
+            <p className="text-center text-3xl mt-4 font-bold relative text-white">Sorry, the country {`${country}`} {"isn't"} listed...</p>
         } 
         </>
     )
