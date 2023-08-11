@@ -28,7 +28,7 @@ ChartJS.register(
     Legend
 );
 
-export const options = {
+export const defaultOptions = {
     elements: {
         point: {
             pointStyle: 'rect'
@@ -45,6 +45,15 @@ export const options = {
                 }
             }
         }
+    },
+    scales: {
+      y: {
+        ticks: {
+            callback: value => [-100, -75, -50, -25, 0, 25, 50, 75, 100].includes(value) ? value : undefined,
+        },
+        min: -100,
+        max: 100,
+      }
     }
 }
 
@@ -150,19 +159,36 @@ export default function Page({population, country, tables}) {
         if(tables) {
             for(let i = 0; i < tables.length; i++) {
                 let table = tables[i]
+                let copiedData = [...table.table]
+                let unit = table.unit
+                let options = JSON.parse(JSON.stringify(defaultOptions)) //Avoid errors altering ref obj
+                // console.log("Unit: ", unit)
+                if(table.unit == "million people") {
+                    copiedData = copiedData.map((data) => {
+                        return (data/population) * 100
+                    })
+                    unit = "% of population"
+                    options.scales.y.min = 0 //There can't be negative % of pop.
+                    // console.log(`Table${i} Data`, table.table)
+                } else {
+                    console.log(`Min: ${table.minVal}, Max: ${table.maxVal}`)
+                    if(table.minVal < options.scales.y.min) options.scales.y.min = (Math.round(table.minVal/100)*100) - 50
+                    if(table.maxVal > options.scales.y.max) options.scales.y.max = (Math.round(table.maxVal/100)*100) + 50
+
+                }
+
                 let obj = {
                     labels: table.metrics,
                     datasets: [{
-                            label: table.unit,
-                            data: table.table,
+                            label: unit,
+                            data: copiedData,
                             borderWidth: 1,
                             borderColor: "#f55142",
                             backgroundColor: "#f5f242",
                             color: "#73342e"
                     }]
                 }
-                console.log(`Table${i}`, obj)
-                tableData.push(obj)
+                tableData.push({data: obj, options})
             }
         }
     // }, [])
@@ -198,7 +224,7 @@ export default function Page({population, country, tables}) {
                 <div className="cursor-pointer mb-6 shadow-xl shadow-shade relative mx-auto px-8 py-4 w-5/6 sm:w-1/2 bg-white rounded-xl hover:scale-105 transition-all duration-300">
                     <p className="text-3xl font-semibold text-start line-clamp-2 w-3/4">{data.title}</p>
                     <p className="text-xl mt-2 text-start mb-2">Table {data.numberedIndex}</p>
-                    <Line options={options} data={tableData[i]} />
+                    <Line options={tableData[i].options} data={tableData[i].data} />
                 </div>
             </Link>
             </>
