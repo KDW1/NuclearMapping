@@ -12,15 +12,13 @@ export default function Home() {
   console.log("Simple Tables: ", simpleTables)
   return (
     <>
-    <div className="px-12 py-4 bg-white mx-auto pt-4">
+    <div className="px-12 py-4 bg-white w-1/2 rounded-md my-2 mx-auto pt-4">
         <Link href="/">
             <p className="text-3xl bruh:text-5xl md:text-6xl font-semibold text-center">Nuclear Data</p>
         </Link>
-        <div className="text-center">
+        <div className="text-center pb-4">
             <p className="text-2xl text-center inline">Mapping project by </p>
-            <Link className="text-2xl font-bold text-red-200 underline hover:text-red-500 transition-all duration-300" href="https://kingcode.dev">KingCode</Link>
-            <p className="text-2xl">Check out the study <Link className='font-bold text-red-200 underline hover:text-red-500 transition-all duration-300' href={"https://www.nature.com/articles/s43016-022-00573-0"}>here</Link></p>
-            <p className="text-sm sm:text-base w-full md:w-1/2 lg:w-1/4 mx-auto text-red-300">We display the table data listed under the {"Supplementary Information"} page</p>
+            <Link className="text-2xl font-bold text-red-300 underline hover:text-red-500 transition-all duration-300" href="https://kingcode.dev">KingCode</Link>
         </div>
     </div>
     <div className="mx-auto w-min min-w-max my-4">
@@ -28,6 +26,11 @@ export default function Home() {
           <FontAwesomeIcon className='p-3 cursor-pointer hover:-rotate-12 hover:-translate-x-2 hover:-translate-y-1 transition duration-300 bg-white rounded-xl' icon={faGlobe}>
           </FontAwesomeIcon>
       </Link>
+    </div>
+    <div className="bg-white px-6 py-4 w-3/4 mx-auto rounded-md text-center">
+            <p className="text-lg overflow-y-auto px-10 py-4 h-40">{`      An important study published  in`} <span className="italic font-bold">Nature/Food</span> {`last year predicted the catastrophic global famine that would follow a nuclear war.   The study looked at at several different scenarios involving different numbers of nuclear warheads and examined the extent of the famine that would be caused by each scenario given a number of possible strategies that people might adopt to try to mitigate the effects.  This website allows you to access the vast amount of data contained in the study on a country by country basis.  You can either click on the globe icon and then click on an individual country, or you can type in the name of the country.
+`} <Link className='font-bold text-red-300 underline hover:text-red-500 transition-all duration-300' href={"https://www.nature.com/articles/s43016-022-00573-0"}>(associated link)</Link></p>
+            <p className="text-sm sm:text-base w-full md:w-1/2 lg:w-1/4 mx-auto text-red-300">We display the table data listed under the {"Supplementary Information"} page</p>
     </div>
     <SearchBar />
 

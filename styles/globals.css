@@ -15,3 +15,128 @@
     --background-end-rgb: 0, 0, 0;
   }
 } */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+  
+@import url('https://fonts.googleapis.com/css2?family=Playfair:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+
+/* :root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+} */
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #ff000021;
+  border-radius: 5px;
+  /* border: dashed;
+  border-color: #ff000021; */
+  
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #ff8989;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(255, 119, 119);
+  transition-duration: 0.5s;
+}
+
+.masked-overflow {
+  /* scroll bar width, for use in mask calculations */
+  --scrollbar-width: 8px;
+
+  /* mask fade distance, for use in mask calculations */
+  --mask-height: 32px;
+
+  /* If content exceeds height of container, overflow! */
+  overflow-y: auto;
+
+  /* Need to make sure container has bottom space,
+otherwise content at the bottom is always faded out */
+  padding-bottom: var(--mask-height);
+
+  /* Keep some space between content and scrollbar */
+  padding-right: 20px;
+
+  /* The CSS mask */
+
+  /* The content mask is a linear gradient from top to bottom */
+  --mask-image-content: linear-gradient(
+      to bottom,
+      transparent,
+      black var(--mask-height),
+      black calc(100% - var(--mask-height)),
+      transparent
+  );
+
+  /* Here we scale the content gradient to the width of the container 
+minus the scrollbar width. The height is the full container height */
+  --mask-size-content: calc(100% - var(--scrollbar-width)) 100%;
+
+  /* The scrollbar mask is a black pixel */
+  --mask-image-scrollbar: linear-gradient(black, black);
+
+  /* The width of our black pixel is the width of the scrollbar.
+The height is the full container height */
+  --mask-size-scrollbar: var(--scrollbar-width) 100%;
+
+  /* Apply the mask image and mask size variables */
+  mask-image: var(--mask-image-content), var(--mask-image-scrollbar);
+  mask-size: var(--mask-size-content), var(--mask-size-scrollbar);
+
+  /* Position the content gradient in the top left, and the 
+scroll gradient in the top right */
+  mask-position: 0 0, 100% 0;
+
+  /* We don't repeat our mask images */
+  mask-repeat: no-repeat, no-repeat;
+}
+
+body {
+  @apply bg-white
+}
+
+@layer base {
+
+  .primary {
+    @apply  text-3xl md:text-4xl lg:text-7xl
+  }
+
+  .semi {
+    @apply text-xl md:text-3xl
+  }
+
+  .large {
+    @apply text-xl lg:text-2xl 
+  }
+  .secondary {
+    @apply text-sm md:text-lg lg:text-xl 
+  }
+  .tertiary {
+    @apply md:text-base lg:text-lg 
+  }
+  
+  .small {
+    @apply text-xs md:text-sm
+  }
+}
