@@ -29,7 +29,7 @@ export default function Home() {
     </div>
     <div className="bg-white px-6 py-4 w-3/4 mx-auto rounded-md text-center">
             <p className="text-lg overflow-y-auto px-10 py-4 h-40">{`      An important study published  in`} <span className="italic font-bold">Nature/Food</span> {`last year predicted the catastrophic global famine that would follow a nuclear war.   The study looked at at several different scenarios involving different numbers of nuclear warheads and examined the extent of the famine that would be caused by each scenario given a number of possible strategies that people might adopt to try to mitigate the effects.  This website allows you to access the vast amount of data contained in the study on a country by country basis.  You can either click on the globe icon and then click on an individual country, or you can type in the name of the country.
-`} <Link className='font-bold text-red-300 underline hover:text-red-500 transition-all duration-300' href={"https://www.nature.com/articles/s43016-022-00573-0"}>(associated link)</Link></p>
+`} <Link className='font-bold text-red-300 underline hover:text-red-500 transition-all duration-300' href={"https://www.nature.com/articles/s43016-022-00573-0"}>(study here)</Link></p>
             <p className="text-sm sm:text-base w-full md:w-1/2 lg:w-1/4 mx-auto text-red-300">We display the table data listed under the {"Supplementary Information"} page</p>
     </div>
     <SearchBar />
