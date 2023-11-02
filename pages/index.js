@@ -19,7 +19,7 @@ export default function Home() {
         <div className="text-center pb-4">
             <p className="text-2xl text-center inline">Mapping project by </p>
             <p className="font-bold text-2xl space-x-2">
-            <Link className="font-bold text-red-300 underline hover:text-red-500 transition-all duration-300" href="https://kingcode.dev">King-Diorr Willsun</Link>, Dhruv Reddy, and Chris Serrao
+            <Link className="font-bold text-red-400 underline hover:text-red-500 transition-all duration-300" href="https://kingcode.dev">King-Diorr Willsun</Link>, Dhruv Reddy, and Chris Serrao
             </p>
         </div>
     </div>
