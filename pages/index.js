@@ -14,7 +14,7 @@ export default function Home() {
     <>
     <div className="px-12 py-4 bg-white w-1/2 rounded-md my-2 mx-auto pt-4">
         <Link href="/">
-            <p className="text-3xl bruh:text-5xl md:text-6xl font-semibold text-center">Nuclear Data</p>
+            <p className="text-3xl bruh:text-5xl md:text-6xl font-semibold text-center">Nuclear Famine Project</p>
         </Link>
         <div className="text-center pb-4">
             <p className="text-2xl text-center inline">Mapping project by </p>
