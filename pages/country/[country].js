@@ -145,7 +145,7 @@ export const getServerSideProps = async (context) => {
     if(countryPresent) {
         // updateInfo();
         let tablesFound = tablesOf(country);
-        console.log("Tables Found: ", tablesFound);
+        // console.log("Tables Found: ", tablesFound);
         return { props: { population, country, tables: tablesFound} }
     } else {
         return { props: { country }}

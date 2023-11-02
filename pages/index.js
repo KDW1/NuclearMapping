@@ -12,13 +12,15 @@ export default function Home() {
   console.log("Simple Tables: ", simpleTables)
   return (
     <>
-    <div className="px-12 py-4 bg-white w-1/2 rounded-md my-2 mx-auto pt-4">
+    <div className="px-12 py-4 bg-white w-2/3 bruh:w-1/2 rounded-md my-2 mx-auto pt-4">
         <Link href="/">
             <p className="text-3xl bruh:text-5xl md:text-6xl font-semibold text-center">Nuclear Famine Project</p>
         </Link>
         <div className="text-center pb-4">
             <p className="text-2xl text-center inline">Mapping project by </p>
-            <Link className="text-2xl font-bold text-red-300 underline hover:text-red-500 transition-all duration-300" href="https://kingcode.dev">KingCode</Link>
+            <p className="font-bold text-2xl space-x-2">
+            <Link className="font-bold text-red-300 underline hover:text-red-500 transition-all duration-300" href="https://kingcode.dev">King-Diorr Willsun</Link>, Dhruv Reddy, and Chris Serrao
+            </p>
         </div>
     </div>
     <div className="mx-auto w-min min-w-max my-4">
