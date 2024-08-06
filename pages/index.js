@@ -20,18 +20,18 @@ export default function Home() {
         </Link>
         <div className="text-center pb-4">
           <p className="text-2xl text-center inline">Mapping project by </p>
-          <p className="font-bold text-2xl space-x-2">
-            <span className="text-lg text-gray-300 hover:text-shade duration-300 transition ease-in-out">
+          <p className="font-bold group text-2xl space-x-2">
+            <span className="text-lg text-main duration-300 transition ease-in-out">
               programmed by
             </span>
             <Link
-              className="font-bold text-secondaryLightText underline hover:text-shade transition-all duration-300"
+              className="font-bold text-main underline hover:text-shade duration-300 ease-in-out transition"
               href="https://kingcode.dev"
             >
               King-Diorr Willsun
             </Link>
             .{" "}
-            <span className="text-lg text-gray-300 hover:text-shade duration-300 transition ease-in-out">
+            <span className="text-lg text-main">
               Coordinated by
             </span>{" "}
             Dhruv Reddy, and Chris Serrao
@@ -74,7 +74,7 @@ export default function Home() {
  </span>   {`summarizes the results. As horrific as the direct effects of nuclear war would be, due to blast, fire, and radioactivity, more than 10 times as many people would die from the indirect effects on agriculture, in places far removed from any targets.`}
 <br/>
           <Link
-            className="font-bold text-secondaryLightText underline hover:text-red-500 transition-all duration-300"
+            className="font-bold text-secondaryLightText underline hover:text-shade transition-all duration-300"
             href={"https://www.nature.com/articles/s43016-022-00573-0"}
           >
             (study here)
