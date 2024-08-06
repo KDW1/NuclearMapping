@@ -42,7 +42,7 @@
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #ff000021;
+  background: #1426b421;
   border-radius: 5px;
   /* border: dashed;
   border-color: #ff000021; */
@@ -51,13 +51,13 @@
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #ff8989;
+  background: #2b39a5;
   border-radius: 5px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: rgb(255, 119, 119);
+  background: #13218b;
   transition-duration: 0.5s;
 }
 

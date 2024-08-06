@@ -205,7 +205,7 @@ export default function Page({population, country, tables}) {
                 </FontAwesomeIcon>
             </Link>
        </div>
-        <p className="block sm:hidden text-center text-lg mt-4 font-semibold w-3/4 mx-auto relative text-white"><strong>*</strong> Best quality can be seen on bigger screens....</p>
+        <p className="block sm:hidden text-center text-lg mt-4 font-semibold w-3/4 mx-auto relative text-noBgColor"><strong>*</strong> Best quality can be seen on bigger screens....</p>
         <SearchBar />
         { tables ? 
         <>
@@ -232,7 +232,7 @@ export default function Page({population, country, tables}) {
         ))}
         </>
         :
-            <p className="text-center text-3xl mt-4 font-bold relative text-white">Sorry, the country {`${country}`} {"isn't"} listed...</p>
+            <p className="text-center text-3xl mt-4 font-bold relative text-noBgColor">Sorry, the country {`${country}`} {"isn't"} listed...</p>
         } 
         </>
     )

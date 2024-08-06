@@ -32,7 +32,7 @@ export default function SearchBar() {
             country,
             elem: [
               country.slice(0, index),
-              <span key={country} className="text-main font-semibold">
+              <span key={country} className="text-shade font-semibold">
                 {country.slice(index, index + query.length)}
               </span>,
               country.slice(index + query.length, country.length),
@@ -84,7 +84,7 @@ export default function SearchBar() {
           ) : (
             <div>
               <FontAwesomeIcon
-                className="w-5 h-5 mr-2 text-red-300 my-auto animate-spin"
+                className="w-5 h-5 mr-2 text-secondaryLightText my-auto animate-spin"
                 icon={faSpinner}
               ></FontAwesomeIcon>
               <span className="animate-bounce">Finding Country</span>
@@ -115,7 +115,7 @@ export default function SearchBar() {
               }, WAIT_TIME); //Make it seem like its loading
             }}
           >
-            <div className="hover:bg-gray-100 rounded px-2 py-1 bg-white duration-300 transition">
+            <div className="hover:bg-mainLight rounded px-2 py-1 bg-white duration-300 transition">
               {matching.elem ?? matching}
             </div>
           </button>

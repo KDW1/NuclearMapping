@@ -29,8 +29,11 @@ module.exports = {
     },
     extend: {
       colors: {
-        main: colors.rose[700],
-        shade: colors.red[900],
+        mainLight: colors.blue[100],
+        main: colors.blue[300],
+        shade: colors.blue[500],
+        noBgColor: colors.white,
+        secondaryLightText: colors.blue[400]
       },
     },
   },

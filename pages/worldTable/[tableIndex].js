@@ -87,14 +87,14 @@ export default function Page({table}) {
        <SearchBar />
        {
         table ? <>
-        <p className="mx-auto text-center mb-2 w-1/3 text-xl md:text-2xl lg:text-3xl text-white font-bold border-b-4 border-white">
+        <p className="mx-auto text-center mt-6 relative mb-2 w-1/3 text-xl md:text-2xl lg:text-3xl text-noBgColor font-bold border-b-4 border-white">
            Table #{table.numberedIndex}
         </p>
-        <p className="mx-auto text-center mb-2 w-2/3 text-base md:text-xl lg:text-3xl text-white font-bold">
+        <p className="mx-auto text-center mb-2 w-2/3 text-base md:text-xl lg:text-3xl text-noBgColor font-bold">
            {table.title}
         </p>
         <div className="mx-auto">
-           <p className="block mx-auto w-min text-2xl text-white font-bold">
+           <p className="block mx-auto w-min text-2xl text-noBgColor font-bold">
               Metrics:
            </p>
            <select value={currentMetric} onChange={(e) =>{
@@ -114,10 +114,10 @@ export default function Page({table}) {
                 }
            </select>
            
-           <p className="block mb-2 mx-auto w-min min-w-max text-base text-white font-semibold">
+           <p className="block mb-2 mx-auto w-min min-w-max text-base text-noBgColor font-semibold">
               Unit: {table.unit}
            </p>
-           <p className="block mb-4 mx-auto w-min min-w-max text-base text-white font-semibold">
+           <p className="block mb-4 mx-auto w-min min-w-max text-base text-noBgColor font-semibold">
               Displaying countries mentioned in data
            </p> 
            <div className="flex-col md:flex-row md:flex mx-auto min-w-max w-min space-y-2 md:space-x-4 mb-4">
@@ -126,7 +126,7 @@ export default function Page({table}) {
                  <div className="h-8 w-8 bg-white rounded-md">
      
                  </div>
-                 <p className="text-white text-lg ml-2 font-semibold">
+                 <p className="text-noBgColor text-lg ml-2 font-semibold">
                  { table.unit != '% change in caloric production' ? "near 0%" : "0%+" }
 
                  </p>
@@ -135,7 +135,7 @@ export default function Page({table}) {
                  <div className="h-8 w-8 bg-[#fdff83] rounded-md">
      
                  </div>
-                 <p className="text-white text-lg ml-2 font-semibold">
+                 <p className="text-noBgColor text-lg ml-2 font-semibold">
                  { table.unit != '% change in caloric production' ? "0% to 25%" : "0% to -25%" }
                  </p>
               </div>
@@ -143,7 +143,7 @@ export default function Page({table}) {
                  <div className="h-8 w-8 bg-[#ffdf2c] rounded-md">
      
                  </div>
-                 <p className="text-white text-lg ml-2 font-semibold">
+                 <p className="text-noBgColor text-lg ml-2 font-semibold">
                     { table.unit != '% change in caloric production' ? "25% to 50%" : "-25% to -50%" }
                  </p>
               </div>
@@ -151,7 +151,7 @@ export default function Page({table}) {
                  <div className="h-8 w-8 bg-[#ff9531] rounded-md">
      
                  </div>
-                 <p className="text-white text-lg ml-2 font-semibold">
+                 <p className="text-noBgColor text-lg ml-2 font-semibold">
                     { table.unit != '% change in caloric production' ? "50% to 75%" : "-50% to 75%" }
                  </p>
               </div>
@@ -159,7 +159,7 @@ export default function Page({table}) {
                  <div className="h-8 w-8 bg-[#ff2929] rounded-md">
      
                  </div>
-                 <p className="text-white text-lg ml-2 font-semibold">
+                 <p className="text-noBgColor text-lg ml-2 font-semibold">
                  { table.unit != '% change in caloric production' ? "75%+" : "-75%-" }
                  </p>
               </div>
