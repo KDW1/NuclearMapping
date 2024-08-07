@@ -42,18 +42,7 @@ export const getServerSideProps = async (context) => {
 }
 
 export default function CountryTable({table, globalInfo}) {
-    // useEffect(() => {
-    //     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    //         anchor.addEventListener('click', function (e) {
-    //             e.preventDefault();
-    
-    //             document.querySelector(this.getAttribute('href')).scrollIntoView({
-    //                 behavior: 'smooth'
-    //             });
-    //         });
-    //     });
-    // }, [])
-    //Make Country Search Component
+
     return (
         <><div>
         <div className="mx-auto mt-4 mb-4 space-x-4 w-min min-w-max">
