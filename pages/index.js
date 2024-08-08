@@ -71,14 +71,19 @@ export default function Home() {
                 war soot injection. Nature Food, 3, 586-596, doi:10.1038/s43016-022-00573-0.
                  You can download it here:`} {" "}
                  <Link
-                   className="font-bold text-secondaryLightText underline hover:text-shade transition-all duration-300"
+                   className="font-bold break-all text-secondaryLightText underline hover:text-shade transition-all duration-300"
                    href={"https://www.nature.com/articles/s43016-022-00573-0"}
                  >{`https://www.nature.com/articles/s43016-022-00573-0`}</Link>
                  <br /> <br />
  <span className="font-bold">                 {`Table 1 of the paper (The Statistics Table on the website)`}  
  </span>   {`summarizes the results. As horrific as the direct effects of nuclear war would be, due to blast, fire, and radioactivity, more than 10 times as many people would die from the indirect effects on agriculture, in places far removed from any targets.`}
 <br/>
+<br />
+Number of weapons on urban targets, yields, direct fatalities from the bomb blasts, and resulting number of people in danger of death due to famine for the different scenarios we studied.  The 5 Tg case scenario is from reference 16 for an India-Pakistan war taking place in 2008; the 16-47 Tg cases are from reference 18 for an India-Pakistan war taking place in 2025; and the 150 Tg case is from reference 52, which assumes attacks on France, Germany, Japan, U.K., U.S., Russia, and China.  The last column is the number of people who would starve by the end of Year 2 when the rest of the population is provided with the minimum amount of food needed to survive, assumed to be a calorie intake of 1911 kcal/capita/day, and for no international trade, from Supplemental Information, Table S5, the Partial Livestock case, in which 50% of livestock grain feed used for human consumption, and 50% of livestock grain feed used to raise livestock, using the latest complete data available, for the year 2010.  For 2010, the world population was 6,703,000,000.  There are many other scenarios in which these amounts of soot could be produced by a nuclear war, and the scenarios we use are only meant to be illustrative examples.  The last column is the case with the fewest number of deaths, and other cases are available in the Supplementary Information
+
         </p>
+        <div className="px-10">
+
         <Table table={
 {
   data: [
@@ -102,10 +107,11 @@ export default function Home() {
   numberedIndex: 1,
   containsCountries: false
 }} globalInfo={[]}></Table>
+        </div>
       </div>
       <SearchBar />
 
-      <div className="mb-12 px-12 pt-4 pb-8 shadow-xl shadow-shade relative bg-white mt-4 w-11/12 md:w-3/4 w-3 rounded-xl mx-auto">
+      <div className="mb-12 px-12 pt-4 pb-8 shadow-xl shadow-shade relative bg-white mt-4 w-11/12 md:w-5/6 lg:w-4/5 rounded-xl mx-auto">
         <p className="text-center text-4xl mt-6 font-semibold">Tables:</p>
         <p className="mt-2 text-base text-center">
           <strong>*</strong>You can click the sections to see tables fully
