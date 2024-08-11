@@ -223,10 +223,10 @@ export default function Page({ population, country, tables }) {
             {population != "Not provided" ? (
               <p className="text-base text-center">
                 {population >= 1000 ? (
-                  <> <span className="font-semibold text-xl text-shade">
+                  <> <span className="font-semibold text-lg text-shade">
                     {(population/1000).toString().substring(0,5)}</span> billion people</>
                 ) : (
-                  <> <span className="font-semibold text-xl text-shade">
+                  <> <span className="font-semibold text-lg text-shade">
                     {population}</span> million people</>
                 )}
               </p>
