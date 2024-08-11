@@ -123,8 +123,6 @@ export const getServerSideProps = async (context) => {
     country = "Brunei";
   } else if (country.toLowerCase() == "The Gambia".toLowerCase()) {
     country = "Gambia";
-  } else if (country.toLowerCase() == "Equatorial Guinea".toLowerCase()) {
-    country = "Guinea";
   } else if (country.toLowerCase() == "Lao PDR".toLowerCase()) {
     country = "Laos";
   } else if (country.toLowerCase() == "The United States".toLowerCase()) {
