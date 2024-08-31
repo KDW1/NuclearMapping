@@ -750,7 +750,7 @@ export const simpleTables = [
             "47 Tg",
             "150 Tg"
         ],
-        "title": "Calorie reduction from the major food crops and marine fish in nations with nuclear weapons.",
+        "title": "Calorie reduction from the major food crops and marine fish in nations with nuclear weapons",
         "unit": "% change in caloric production",
         "numberedIndex": 5
     },
@@ -766,7 +766,7 @@ export const simpleTables = [
             "47 Tg",
             "150 Tg"
         ],
-        "title": "Calorie reduction from the major food crops and marine fish in all nations calculated.",
+        "title": "Calorie reduction from the major food crops and marine fish in all nations calculated",
         "unit": "% change in caloric production",
         "numberedIndex": 6
     },
@@ -779,7 +779,7 @@ export const simpleTables = [
             "Partial Livestock",
             "No Livestock"
         ],
-        "title": "Assumptions for the Livestock, Partial Livestock, and No Livestock cases.",
+        "title": "Assumptions for the Livestock, Partial Livestock, and No Livestock cases",
         "unit": "",
         "numberedIndex": 7
     },
@@ -798,7 +798,8 @@ export const simpleTables = [
             "150 Tg +hw",
             "150 Tg + tw"
         ],
-        "title": "Number of people who would die from starvation after the simulated nuclear war in Year 2 for all nations for the Livestock case with trade off.",
+        "title": "Livestock case, Trade off:  Number of people who would die from starvation",
+        // "title": "Number of people who would die from starvation after the simulated nuclear war in Year 2 for all nations for the Livestock case with trade off.",
         "unit": "million people",
         "numberedIndex": 8
     },
@@ -817,7 +818,8 @@ export const simpleTables = [
             "150 Tg + hw",
             "150 Tg + tw"
         ],
-        "title": "Number of people who would die from starvation after the simulated nuclear war in Year 2 for all nations for the Partial Livestock case with trade off.",
+        "title": "Partial Livestock case, Trade off:  Number of people who would die from starvation",
+        // "title": "Number of people who would die from starvation after the simulated nuclear war in Year 2 for all nations for the Partial Livestock case with trade off.",
         "unit": "million people",
         "numberedIndex": 9
     },
@@ -836,7 +838,8 @@ export const simpleTables = [
             "150 Tg + hw",
             "150 Tg + tw"
         ],
-        "title": "Number of people who would die from starvation after the simulated nuclear war in Year 2 for all nations for the No Livestock case with trade off.",
+        "title": "No Livestock case, Trade off:  Number of people who would die from starvation",
+        // "title": "Number of people who would die from starvation after the simulated nuclear war in Year 2 for all nations for the No Livestock case with trade off.",
         "unit": "million people",
         "numberedIndex": 10
     },
@@ -855,7 +858,8 @@ export const simpleTables = [
             "150 Tg +hw",
             "150 Tg + tw"
         ],
-        "title": "Number of people who would die from starvation after the simulated nuclear war in Year 2 for all nations for the Livestock case with trade on.",
+        "title": "Livestock case, Trade on:  Number of people who would die from starvation",
+        // "title": "Number of people who would die from starvation after the simulated nuclear war in Year 2 for all nations for the Livestock case with trade on.",
         "unit": "million people",
         "numberedIndex": 11
     },
@@ -874,7 +878,8 @@ export const simpleTables = [
             "150 Tg + hw",
             "150 Tg + tw"
         ],
-        "title": "Number of people who would die from starvation after the simulated nuclear war in Year 2 for all nations for the Partial Livestock case with trade on.",
+        "title": "Partial Livestock case, Trade on:  Number of people who would die from starvation",
+        // "title": "Number of people who would die from starvation after the simulated nuclear war in Year 2 for all nations for the Partial Livestock case with trade on.",
         "unit": "million people",
         "numberedIndex": 12
     },
@@ -893,7 +898,8 @@ export const simpleTables = [
             "150 Tg + hw",
             "150 Tg + tw"
         ],
-        "title": "Number of people who would die from starvation after the simulated nuclear war in Year 2 for all nations for the No Livestock case with trade on.",
+        "title": "No Livestock case, Trade on:  Number of people who would die from starvation",
+        // "title": "Number of people who would die from starvation after the simulated nuclear war in Year 2 for all nations for the No Livestock case with trade on.",
         "unit": "million people",
         "numberedIndex": 13
     }
@@ -1405,7 +1411,7 @@ export const fullTables = [
             "47 Tg",
             "150 Tg"
         ],
-        "title": "Calorie reduction from the major food crops and marine fish in nations with nuclear weapons.",
+        "title": "Calorie reduction from the major food crops and marine fish in nations with nuclear weapons",
         "unit": "% change in caloric production",
         "numberedIndex": 5
     },
@@ -2925,7 +2931,7 @@ export const fullTables = [
             "47 Tg",
             "150 Tg"
         ],
-        "title": "Calorie reduction from the major food crops and marine fish in all nations calculated.",
+        "title": "Calorie reduction from the major food crops and marine fish in all nations calculated",
         "unit": "% change in caloric production",
         "numberedIndex": 6
     },
@@ -2975,7 +2981,7 @@ export const fullTables = [
             "Partial Livestock",
             "No Livestock"
         ],
-        "title": "Assumptions for the Livestock, Partial Livestock, and No Livestock cases.",
+        "title": "Assumptions for the Livestock, Partial Livestock, and No Livestock cases",
         "unit": "",
         "numberedIndex": 7
     },
@@ -4987,7 +4993,8 @@ export const fullTables = [
             "150 Tg +hw",
             "150 Tg + tw"
         ],
-        "title": "Number of people who would die from starvation after the simulated nuclear war in Year 2 for all nations for the Livestock case with trade off.",
+        "title": "Livestock case, Trade off:  Number of people who would die from starvation",
+        // "title": "Number of people who would die from starvation after the simulated nuclear war in Year 2 for all nations for the Livestock case with trade off.",
         "unit": "million people",
         "numberedIndex": 8
     },
@@ -6999,7 +7006,8 @@ export const fullTables = [
             "150 Tg + hw",
             "150 Tg + tw"
         ],
-        "title": "Number of people who would die from starvation after the simulated nuclear war in Year 2 for all nations for the Partial Livestock case with trade off.",
+        "title": "Partial Livestock case, Trade off:  Number of people who would die from starvation",
+        // "title": "Number of people who would die from starvation after the simulated nuclear war in Year 2 for all nations for the Partial Livestock case with trade off.",
         "unit": "million people",
         "numberedIndex": 9
     },
@@ -9011,7 +9019,8 @@ export const fullTables = [
             "150 Tg + hw",
             "150 Tg + tw"
         ],
-        "title": "Number of people who would die from starvation after the simulated nuclear war in Year 2 for all nations for the No Livestock case with trade off.",
+        "title": "No Livestock case, Trade off:  Number of people who would die from starvation",
+        // "title": "Number of people who would die from starvation after the simulated nuclear war in Year 2 for all nations for the No Livestock case with trade off.",
         "unit": "million people",
         "numberedIndex": 10
     },
@@ -11023,7 +11032,8 @@ export const fullTables = [
             "150 Tg +hw",
             "150 Tg + tw"
         ],
-        "title": "Number of people who would die from starvation after the simulated nuclear war in Year 2 for all nations for the Livestock case with trade on.",
+        "title": "Livestock case, Trade on:  Number of people who would die from starvation",
+        // "title": "Number of people who would die from starvation after the simulated nuclear war in Year 2 for all nations for the Livestock case with trade on.",
         "unit": "million people",
         "numberedIndex": 11
     },
@@ -13035,7 +13045,8 @@ export const fullTables = [
             "150 Tg + hw",
             "150 Tg + tw"
         ],
-        "title": "Number of people who would die from starvation after the simulated nuclear war in Year 2 for all nations for the Partial Livestock case with trade on.",
+        "title": "Partial Livestock case, Trade on:  Number of people who would die from starvation",
+        // "title": "Number of people who would die from starvation after the simulated nuclear war in Year 2 for all nations for the Partial Livestock case with trade on.",
         "unit": "million people",
         "numberedIndex": 12
     },
@@ -15047,7 +15058,8 @@ export const fullTables = [
             "150 Tg + hw",
             "150 Tg + tw"
         ],
-        "title": "Number of people who would die from starvation after the simulated nuclear war in Year 2 for all nations for the No Livestock case with trade on.",
+        "title": "No Livestock case, Trade on:  Number of people who would die from starvation",
+        // "title": "Number of people who would die from starvation after the simulated nuclear war in Year 2 for all nations for the No Livestock case with trade on.",
         "unit": "million people",
         "numberedIndex": 13
     }
