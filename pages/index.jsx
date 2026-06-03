@@ -23,7 +23,7 @@ export default function Home() {
         <div className="text-center pb-4">
           <p className="text-2xl text-center inline">Mapping project by </p>
           <p className="font-bold group text-xl md:text-2xl space-x-2">
-            <span className="text-base md:text-lg text-main duration-300 transition ease-in-out">
+            <span className="text-base md:text-lg font-normal duration-300 transition ease-in-out">
               programmed by
             </span>
             <Link
@@ -33,7 +33,7 @@ export default function Home() {
               King-Diorr Willsun
             </Link>
             .{" "}
-            <span className="text-base md:text-lg text-main">
+            <span className="text-base md:text-lg font-normal">
               in collaboration with
             </span>{" "}
             Dhruv Reddy, and Chris Serrao.
