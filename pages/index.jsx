@@ -4,6 +4,7 @@ import { simpleTables } from "@/utils/statistics";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGlobe, faHome } from "@fortawesome/free-solid-svg-icons";
+import { faGithub } from "@fortawesome/free-brands-svg-icons"
 import SearchBar from "@/components/SearchBar";
 import Table from "@/components/Table";
 
@@ -33,10 +34,17 @@ export default function Home() {
             </Link>
             .{" "}
             <span className="text-base md:text-lg text-main">
-              Coordinated by
+              in collaboration with
             </span>{" "}
             Dhruv Reddy, and Chris Serrao.
           </p>
+          
+        <Link className="mx-auto" href="https://github.com/KDW1/NuclearMapping">
+          <FontAwesomeIcon
+            className="h-8 mt-4"
+            icon={faGithub}
+          ></FontAwesomeIcon>
+        </Link>
         </div>
       </div>
       <div className="mx-auto w-min min-w-max my-4">
@@ -120,7 +128,7 @@ Number of weapons on urban targets, yields, direct fatalities from the bomb blas
           <div key={`table${i}`}>
             {table.metrics[0] == "Nation" || table.metrics[0] == "Nations" ? (
               <Link href={`/worldTable/${i + 1}`}>
-                <div className="hover:scale-105 bg-white w-full px-4 py-2 transition duration-300 ease-in-out cursor-pointer mt-12 mx-auto border-b-2 pb-4">
+                <div className="hover:scale-105 bg-white w-full px-4 py-2 transition duration-300 ease-in-out cursor-pointer mt-12 mx-auto border-b-2">
                   <p className="text-3xl font-semibold line-clamp-1">
                     {table.title}:
                   </p>
